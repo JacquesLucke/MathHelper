@@ -1,7 +1,7 @@
 IDs -> "website", "navigationList", ...
 
 Task description in URL:
-	seperator: _._
+	seperator: -.-
 	1. file name
 	2. class name
 	3. optional data (task specific)
