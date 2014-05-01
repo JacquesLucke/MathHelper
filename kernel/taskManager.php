@@ -1,20 +1,21 @@
 <?php
-	
-	function SetTaskTitle($task)
+	class Task
 	{
-		echo "<title>$task</title>";
-	}
+		function SetTaskTitle($task)
+		{
+			echo "<title>$task</title>";
+		}
 
-	function AddTaskStyle($task)
-	{
+		function AddTaskStyle($task)
+		{
+		}
+		
+		function AddTask($task)
+		{
+		}
+		
+		function AddTaskHelp($task)
+		{
+		}
 	}
-	
-	function AddTask($task)
-	{
-	}
-	
-	function AddTaskHelp($task)
-	{
-	}
-	
 ?>
