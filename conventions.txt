@@ -5,4 +5,4 @@ Task description in URL:
 	1. file name
 	2. class name
 	3. optional data (task specific)
-	z.b. task=basicPlus.php_._BasicPlusTask
+	z.b. task=basicPlus_._BasicPlusTask

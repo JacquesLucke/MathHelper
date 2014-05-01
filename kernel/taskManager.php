@@ -3,9 +3,31 @@
 	
 	function GetTaskFromString($taskString)
 	{
-		list($fileName, $taskName, $optional) = explode("-.-", $taskString);
+		list($path, $taskName, $optional) = explode("-.-", $taskString);
+		$path = "tasks/". $path .".php";
+		$e = (string)include($path);
+		if($e == "1" && function_exists($taskName)) return $taskName($optional);
+		else return new ErrorType;
+	}
 	
-		$t = new SimpleQuestionAnswerType("was ist 2+2?", "4");
-		return $t;
+	class ErrorType
+	{
+		public function SetTaskTitle()
+		{
+			echo "<title>Url ungültig</title>";
+		}
+
+		public function AddTaskStyle()
+		{
+		}
+		
+		public function AddTask()
+		{
+			echo "ungültige Url";
+		}
+		
+		public function AddTaskHelp()
+		{
+		}
 	}
 ?>
