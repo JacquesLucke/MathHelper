@@ -72,3 +72,9 @@ body {
 #footer span{
 	margin: 10px;
 }
+
+a:link {	color:#021453; text-decoration:none;}
+a:visited {	color:#021453; text-decoration:none;}
+a:focus {	color:#021453; text-decoration:none;}
+a:hover {	color:#021453; text-decoration:none;}
+a:active {	color:#021453; text-decoration:none;}
