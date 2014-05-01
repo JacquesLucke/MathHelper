@@ -1,20 +1,28 @@
 <?php
+	include("TaskTypes/SimpleQuestionAnswerType.php");
+	
+	function GetTaskFromString($taskString)
+	{
+		$t = new SimpleQuestionAnswerType("was ist 2+2?", "4");
+		return $t;
+	}
+
 	class TaskType
 	{
-		function SetTaskTitle($task)
+		function SetTaskTitle()
 		{
-			echo "<title>$task</title>";
+			echo "<title>task</title>";
 		}
 
-		function AddTaskStyle($task)
+		function AddTaskStyle()
 		{
 		}
 		
-		function AddTask($task)
+		function AddTask()
 		{
 		}
 		
-		function AddTaskHelp($task)
+		function AddTaskHelp()
 		{
 		}
 	}

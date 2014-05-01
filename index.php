@@ -1,8 +1,7 @@
 <?php
 	include("kernel/taskManager.php");
-
-	$task = $_GET['task'];
 	
+	$task = GetTaskFromString($_GET['task']);	
 ?>
 
 
@@ -11,10 +10,10 @@
 		<link rel="stylesheet" type="text/css" href="styles/indexStyle.css">
 		
 		<?php
-			if(isset($task)) 
+			if(isset($_GET['task'])) 
 			{
-				AddTaskStyle($task);
-				SetTaskTitle($task);
+				$task->AddTaskStyle();
+				$task->SetTaskTitle();
 			}
 			else
 			{
@@ -32,10 +31,10 @@
 			</div>
 			<div id="currentTask">
 				<div id="actualTask">
-					<?php 	if(isset($task)) AddTask($task); ?>
+					<?php	$task->AddTask(); ?>
 				</div>
 				<div id="help">
-					<?php if(isset($task)) AddTaskHelp($task); ?>
+					<?php 	$ask->AddTaskHelp(); ?>
 				</div>
 			</div>
 			<div id="footer">
