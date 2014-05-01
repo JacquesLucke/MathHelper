@@ -11,6 +11,10 @@
 			<div id="status">
 			</div>
 			<div id="currentTask">
+				<div id="actualTask">
+				</div>
+				<div id="help">
+				</div>
 			</div>
 			<div id="footer">
 			</div>

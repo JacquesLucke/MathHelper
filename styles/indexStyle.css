@@ -34,7 +34,7 @@ body {
 }
 
 #currentTask{
-	width: 900px;
+	width: 980px;
 	height: 650px;
 	background-color: rgb(216, 210, 255);
 	margin: 5px;
@@ -44,7 +44,26 @@ body {
 	margin-right: auto;
 }
 
+#actualTask{
+	float: left;
+	
+	width: 710px;
+	height: 640px;
+	background-color: rgb(100, 100, 100);
+	margin: 5px;
+}
+#help{
+	float: left;
+	
+	width: 250px;
+	height: 640px;
+	background-color: rgb(100, 100, 100);
+	margin: 5px;
+}
+
 #footer{
+	clear:none;
+	
 	width: 980px;
 	height: 100px;
 	background-color: rgb(96, 11, 204);
