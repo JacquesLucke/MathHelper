@@ -34,7 +34,7 @@
 					<?php	$task->AddTask(); ?>
 				</div>
 				<div id="help">
-					<?php 	$ask->AddTaskHelp(); ?>
+					<?php 	$task->AddTaskHelp(); ?>
 				</div>
 			</div>
 			<div id="footer">

@@ -1,5 +1,5 @@
 <?php
-	class SimpleQuestionAnswerType extends TaskType
+	class SimpleQuestionAnswerType
 	{
 		private $question;
 		private $answer;
@@ -10,23 +10,24 @@
 			$this->answer = $answer;
 		}
 	
-		function SetTaskTitle()
+		public function SetTaskTitle()
 		{
 			echo "<title>". $this->question ."</title>";
 		}
 
-		function AddTaskStyle()
+		public function AddTaskStyle()
 		{
 		}
 		
-		function AddTask()
+		public function AddTask()
 		{
 			echo "Frage: ". $this->question . "<br/>";
 			echo "Antwort: ". $this->answer . "<br/>";
 		}
 		
-		function AddTaskHelp()
+		public function AddTaskHelp()
 		{
+			echo "hilfe";
 		}
 	}
 ?>
