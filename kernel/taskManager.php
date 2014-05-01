@@ -1,5 +1,5 @@
 <?php
-	class Task
+	class TaskType
 	{
 		function SetTaskTitle($task)
 		{
