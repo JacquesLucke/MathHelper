@@ -1,8 +1,26 @@
+<?php
+	include("kernel/taskManager.php");
+
+	$task = $_GET['task'];
+	
+?>
+
+
 <html>
 	<head>
-		<title>Mathehilfe</title>
-		
 		<link rel="stylesheet" type="text/css" href="styles/indexStyle.css">
+		
+		<?php
+			if(isset($task)) 
+			{
+				AddTaskStyle($task);
+				SetTaskTitle($task);
+			}
+			else
+			{
+				echo "<title>Mathehilfe</title>";
+			}
+		?>
 	</head>
 	<body>
 		<div id="website">
@@ -14,10 +32,10 @@
 			</div>
 			<div id="currentTask">
 				<div id="actualTask">
-					please load a task
+					<?php 	if(isset($task)) AddTask($task); ?>
 				</div>
 				<div id="help">
-					Help for the task
+					<?php if(isset($task)) AddTaskHelp($task); ?>
 				</div>
 			</div>
 			<div id="footer">
