@@ -1,6 +1,10 @@
 <?php
 	function GenerateBasicMathTask($data)
 	{
-		return new SimpleQuestionAnswerType("was ist 1+3?", "4");
+		$z1 = rand(2, 100);
+		$z2 = rand(2, 100);
+		$t = new SimpleQuestionAnswerType($z1 ."+". $z2, $z1 + $z2);
+		return $t;
+		
 	}
 ?>

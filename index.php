@@ -41,5 +41,7 @@
 				<span>von Jacques Lucke</span>
 			</div>
 		</div>
+		
+		<?php 	$task->AddScript(); ?>
 	</body>
 </html>
