@@ -1,6 +1,8 @@
 <html>
 	<head>
 		<title>Mathehilfe</title>
+		
+		<link rel="stylesheet" type="text/css" href="styles/indexStyle.css">
 	</head>
 	<body>
 		<div id="website">
