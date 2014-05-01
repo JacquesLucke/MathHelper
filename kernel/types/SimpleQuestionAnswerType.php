@@ -47,6 +47,7 @@
 				<input id='resultTextBox' onkeydown="if(event.keyCode == 13) CheckResult()"></input><br/>
 				<button onclick='CheckResult()' id="checkButton" >Vergleichen</button><br/>
 				<span id="output"></span>
+				<a href="?task=MostBasicMathTasks-.-GenerateBasicMathTask" id="next">Nächste Aufgabe</a>
 			<?php
 		}
 		
