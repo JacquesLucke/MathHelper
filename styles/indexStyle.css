@@ -1,0 +1,31 @@
+body {
+}
+
+#website{
+	width: 1000px;
+	color: rgb(141, 204, 96);
+}
+
+#header{
+	width: 100%;
+	margin: 5px;
+	color: rgb(79, 153, 26);
+}
+
+#status{
+	width: 100%;
+	color: rgb(255, 252, 146);
+	margin: 5px;
+}
+
+#currentTask{
+	width: 90%;
+	color: rgb(216, 210, 255);
+	margin: 5px;
+}
+
+#footer{
+	width: 100%;
+	color: rgb(96, 11, 204);
+	margin: 5px;
+}
