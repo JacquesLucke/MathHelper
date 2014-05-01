@@ -1,10 +1,10 @@
 body {
+	background-color:rgb(230, 230, 230);
 }
 
 #website{
 	width: 1000px;
 	height: 900px;
-	background-color: rgb(141, 204, 96);
 	
 	text-align: center;
 	margin-left: auto;
@@ -15,7 +15,6 @@ body {
 	width: 980px;
 	height: 50px;
 	margin: 5px;
-	background-color: rgb(79, 153, 26);
 	
 	text-align: center;
 	margin-left: auto;
@@ -25,7 +24,6 @@ body {
 #status{
 	width: 980px;
 	height: 70px;
-	background-color: rgb(255, 252, 146);
 	margin: 5px;
 	
 	text-align: center;
@@ -36,7 +34,6 @@ body {
 #currentTask{
 	width: 980px;
 	height: 650px;
-	background-color: rgb(216, 210, 255);
 	margin: 5px;
 	
 	text-align: center;
@@ -46,18 +43,18 @@ body {
 
 #actualTask{
 	float: left;
+	background-color:rgb(210, 210, 210);
 	
 	width: 710px;
 	height: 640px;
-	background-color: rgb(100, 100, 100);
 	margin: 5px;
 }
 #help{
 	float: left;
+	background-color:rgb(210, 210, 210);
 	
 	width: 250px;
 	height: 640px;
-	background-color: rgb(100, 100, 100);
 	margin: 5px;
 }
 
@@ -66,7 +63,6 @@ body {
 	
 	width: 980px;
 	height: 40px;
-	background-color: rgb(96, 11, 204);
 	margin: 5px;
 	
 	text-align: right;
