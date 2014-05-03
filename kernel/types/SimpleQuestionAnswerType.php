@@ -47,7 +47,7 @@
 				<input id='resultTextBox' onkeydown="if(event.keyCode == 13) CheckResult()"></input><br/>
 				<button onclick='CheckResult()' id="checkButton" >Vergleichen</button><br/>
 				<span id="output"></span>
-				<a href="?task=MentalMathTasks-.-GenerateMentalMathTask" id="next">Nächste Aufgabe</a>
+				<button onclick="window.location.reload()" id="nextTask">Nächste Aufgabe</button>
 			<?php
 		}
 		
