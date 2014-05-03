@@ -1,6 +1,7 @@
 <?php
-	error_reporting(E_ALL);
-    ini_set('display_errors', 1);
+	// should be off, when committing to master
+	//error_reporting(E_ALL);
+    //ini_set('display_errors', 1);
 
 	include("kernel/taskManager.php");
 	
