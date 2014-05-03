@@ -1,7 +1,9 @@
 <?php
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
 	function GenerateMentalMathTask($data)
 	{
-		if($data == "") $random = rand(1, 5);
+		if($data == "") $random = rand(1, 6);
 		else $random = $data;
 		
 		// add
@@ -48,7 +50,7 @@
 			$z2 = $z1 * rand(2, 15);
 			$t = new SimpleQuestionAnswerType($z2 .":". $z1, $z2 / $z1);
 		}
-		
+
 		// square root
 		if($random == 5)
 		{
@@ -56,6 +58,14 @@
 			$z2 = $z1 * $z1;
 			$t = new SimpleQuestionAnswerType("\sqrt{". $z2 . "}", $z1);
 		} 
+
+        // square
+        if ($random == 6)
+        {
+            $z = rand(1, 15);
+            $t = new SimpleQuestionAnswerType($z."^"."2", pow($z, 2));
+            return $t;
+        }
 		
 		$t->help = '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-1">nur Addition üben</a></br>';
 		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-2">nur Subtraktion üben</a></br>';
