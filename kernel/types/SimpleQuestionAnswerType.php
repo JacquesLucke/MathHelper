@@ -27,6 +27,10 @@
 						margin: 20px;
 						margin-top: 60px;
 					}
+					#showResult{
+						font-size: 25px;
+						margin: 20px;
+					}
 					#resultTextBox{
 						font-size: 35px;
 						width: 300px;
@@ -51,6 +55,7 @@
 			if($this->jsMathUse) echo "<div id='question'><div class='math'>". $this->question . "</div></div><br/>";
 			else echo "<div id='question'>". $this->question . "</div><br/>";
 			?>
+				<button onclick="ShowResult()" id="showResult">Lösung</button>
 				<input id='resultTextBox' onkeyup="CheckResult(); if(event.keyCode == 13) Next();"></input>
 				<button onclick="Next()" id="nextTask">Nächste</button>
 			<?php
@@ -67,14 +72,20 @@
 						var r = document.getElementById("resultTextBox").value;
 						if(r == result)
 						{
-							document.getElementById("resultTextBox").style.backgroundColor = "rgb(153, 255, 196)"
+							document.getElementById("resultTextBox").style.backgroundColor = "rgb(153, 255, 196)";
 						}
 						else
 						{
-							document.getElementById("resultTextBox").style.backgroundColor = "rgb(255, 188, 183)"
+							document.getElementById("resultTextBox").style.backgroundColor = "rgb(255, 188, 183)";
 							document.getElementById("resultTextBox").focus();
 						}
 					} 
+					
+					function ShowResult()
+					{
+						document.getElementById("resultTextBox").value = result;
+						document.getElementById("resultTextBox").style.backgroundColor = "rgb(153, 255, 196)";
+					}
 					
 					function Next()
 					{
