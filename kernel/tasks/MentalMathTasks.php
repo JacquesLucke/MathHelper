@@ -90,7 +90,10 @@
 		$t = new SimpleQuestionAnswerType("Kürzen: <div class='math'>\\frac{". $z1 * $z3 ."}{". $z2 * $z3 ."}=</div>", $z1 ."/". $z2);
 		$t->jsMathUse = false;
 		
-		$t->help = '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask">andere Kopfrechenaufgaben üben</a></br>';
+		$t->help = 'Beispiel: 3/4 ; 18/5';
+		$t->help .= '</br>';
+		$t->help .= '</br>';
+		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask">andere Kopfrechenaufgaben üben</a></br>';
 		return $t;
 	}
 ?>
