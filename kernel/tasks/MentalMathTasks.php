@@ -1,7 +1,8 @@
 <?php
 	function GenerateMentalMathTask($data)
 	{
-		if($data == "") $random = rand(1, 6);
+		$numTaskTypes = 6;
+		if($data == "" || $data < 1 || $data > $numTaskTypes) $random = rand(1, $numTaskTypes);
 		else $random = $data;
 		
 		// add
