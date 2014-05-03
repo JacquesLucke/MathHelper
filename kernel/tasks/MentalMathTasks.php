@@ -1,7 +1,7 @@
 <?php
 	function GenerateMentalMathTask($data)
 	{
-		$random = rand(1, 4);
+		$random = rand(1, 5);
 		
 		// add
 		if($random == 1)
@@ -51,5 +51,16 @@
 			$t = new SimpleQuestionAnswerType($z2 .":". $z1, $z2 / $z1);
 			return $t;
 		}
+		
+		// square root
+		if($random == 5)
+		{
+			$z1 = rand(2, 20);
+			$z2 = $z1 * $z1;
+			$t = new SimpleQuestionAnswerType("\sqrt{". $z2 . "}", $z1);
+			return $t;
+		}
+		
+		// 
 	}
 ?>
