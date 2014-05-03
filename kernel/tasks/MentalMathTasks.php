@@ -62,9 +62,8 @@
         // square
         if ($random == 6)
         {
-            $z = rand(1, 15);
+            $z = rand(1, 20);
             $t = new SimpleQuestionAnswerType($z."^"."2", pow($z, 2));
-            return $t;
         }
 		
 		$t->help = '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask">alle üben</a></br>';
@@ -73,6 +72,7 @@
 		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-3">Multiplizieren üben</a></br>';
 		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-4">Dividieren üben</a></br>';
 		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-5">Wurzel ziehen üben</a></br>';
+		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-6"Quadrieren üben</a></br>';
 		
 		return $t;
 	}
