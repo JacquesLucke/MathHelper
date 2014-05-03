@@ -26,15 +26,12 @@
 						margin-top: 100px;
 					}
 					#resultTextBox{
-						font-size: 40px;
+						font-size: 35px;
 						width: 300px;
 					}
-					#checkButton{
-						font-size: 30px;
-					}
-					#output{
-						font-size: 30px;
-						color:rgb(50, 10, 10);
+					#nextTask{
+						font-size: 25px;
+						margin: 20px;
 					}
 				</style>
 			<?php
@@ -44,10 +41,8 @@
 		{
 			echo "<div id='question'>". $this->question . "</div><br/>";
 			?>
-				<input id='resultTextBox' onkeydown="if(event.keyCode == 13) CheckResult()"></input><br/>
-				<button onclick='CheckResult()' id="checkButton" >Vergleichen</button><br/>
-				<span id="output"></span>
-				<button onclick="window.location.reload()" id="nextTask">Nächste Aufgabe</button>
+				<input id='resultTextBox' onkeyup="CheckResult(); if(event.keyCode == 13) Next();"></input>
+				<button onclick="Next()" id="nextTask">Nächste</button>
 			<?php
 		}
 		
@@ -56,21 +51,25 @@
 			?>
 				<script language="javascript">
 					var result = "<?=$this->answer?>";
+					document.getElementById("resultTextBox").focus();
 					function CheckResult()
 					{
 						var r = document.getElementById("resultTextBox").value;
 						if(r == result)
 						{
-							document.getElementById("output").innerHTML = "richtig";
-							document.getElementById("output").style.color = "rgb(10, 50, 10)"
+							document.getElementById("resultTextBox").style.backgroundColor = "rgb(153, 255, 196)"
 						}
 						else
 						{
-							document.getElementById("output").innerHTML = "falsch";
-							document.getElementById("output").style.color = "rgb(50, 10, 10)"
+							document.getElementById("resultTextBox").style.backgroundColor = "rgb(255, 188, 183)"
 							document.getElementById("resultTextBox").focus();
 						}
 					} 
+					
+					function Next()
+					{
+						window.location.reload();
+					}
 				</script>
 			<?php
 		}
