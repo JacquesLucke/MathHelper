@@ -35,6 +35,9 @@
 						font-size: 25px;
 						margin: 20px;
 					}
+					#help{
+						text-align:left;
+					}
 				</style>
 			<?php
 		}
@@ -79,7 +82,7 @@
 		
 		public function AddTaskHelp()
 		{
-			echo $this->help;
+			echo "<div id='help'>". $this->help ."</div>";
 		}
 	}
 ?>
