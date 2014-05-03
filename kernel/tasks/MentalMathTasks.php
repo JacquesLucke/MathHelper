@@ -70,7 +70,22 @@
 		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-4">Dividieren üben</a></br>';
 		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-5">Wurzel ziehen üben</a></br>';
 		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-6">Quadrieren üben</a></br>';
+		$t->help .= '</br>';
+		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask">Brüche üben</a></br>';
 		
+		return $t;
+	}
+	
+	function GenerateFractionTask($data)
+	{
+		$z1 = rand(1, 20);
+		$z2 = rand(1, 20);
+		$z3 = rand(2, 20);
+	
+		$t = new SimpleQuestionAnswerType("Kürzen: <div class='math'>\\frac{". $z1 * $z3 ."}{". $z2 * $z3 ."}=</div>", $z1 ."/". $z2);
+		$t->jsMathUse = false;
+		
+		$t->help = '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask">andere Kopfrechenaufgaben üben</a></br>';
 		return $t;
 	}
 ?>
