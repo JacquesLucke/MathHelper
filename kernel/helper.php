@@ -13,4 +13,11 @@
 			return $a;
 		}
 	}
+	
+	function ReduceFraction(&$a, &$b)
+	{
+		$ggt = GGT($a, $b);
+		$a /= $ggt;
+		$b /= $ggt;
+	}
 ?>
