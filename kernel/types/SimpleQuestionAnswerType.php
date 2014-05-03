@@ -3,6 +3,7 @@
 	{
 		private $question;
 		private $answer;
+		public $jsMathUse = true;
 	
 		public function __construct($question, $answer)
 		{
@@ -20,10 +21,10 @@
 			?>
 				<style>
 					#question{
-						font-size: 50px;
+						font-size:400%;
 						
 						margin: 20px;
-						margin-top: 100px;
+						margin-top: 60px;
 					}
 					#resultTextBox{
 						font-size: 35px;
@@ -39,7 +40,8 @@
 		
 		public function AddTask()
 		{
-			echo "<div id='question'>". $this->question . "</div><br/>";
+			if($this->jsMathUse) echo "<div id='question'><div class='math'>". $this->question . "</div></div><br/>";
+			else echo "<div id='question'>". $this->question . "</div><br/>";
 			?>
 				<input id='resultTextBox' onkeyup="CheckResult(); if(event.keyCode == 13) Next();"></input>
 				<button onclick="Next()" id="nextTask">Nächste</button>
