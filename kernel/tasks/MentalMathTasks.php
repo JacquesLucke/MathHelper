@@ -81,6 +81,8 @@
 		$z1 = rand(1, 20);
 		$z2 = rand(1, 20);
 		$z3 = rand(2, 20);
+		
+		ReduceFraction($z1, $z2);
 	
 		$t = new SimpleQuestionAnswerType("Kürzen: <div class='math'>\\frac{". $z1 * $z3 ."}{". $z2 * $z3 ."}=</div>", $z1 ."/". $z2);
 		$t->jsMathUse = false;
