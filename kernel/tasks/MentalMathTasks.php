@@ -67,11 +67,12 @@
             return $t;
         }
 		
-		$t->help = '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-1">nur Addition üben</a></br>';
-		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-2">nur Subtraktion üben</a></br>';
-		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-3">nur Multiplizieren üben</a></br>';
-		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-4">nur Dividieren üben</a></br>';
-		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-5">nur Wurzel ziehen üben</a></br>';
+		$t->help = '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask">alle üben</a></br>';
+		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-1">Addition üben</a></br>';
+		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-2">Subtraktion üben</a></br>';
+		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-3">Multiplizieren üben</a></br>';
+		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-4">Dividieren üben</a></br>';
+		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-5">Wurzel ziehen üben</a></br>';
 		
 		return $t;
 	}
