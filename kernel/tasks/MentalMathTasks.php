@@ -10,7 +10,6 @@
 			$z1 = rand(2, 100);
 			$z2 = rand(2, 100);
 			$t = new SimpleQuestionAnswerType($z1 ."+". $z2, $z1 + $z2);
-			
 		}
 		
 		// subtract
@@ -61,7 +60,7 @@
         if ($random == 6)
         {
             $z = rand(1, 20);
-            $t = new SimpleQuestionAnswerType($z."^"."2", pow($z, 2));
+            $t = new SimpleQuestionAnswerType($z ."^2", pow($z, 2));
         }
 		
 		$t->help = '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask">alle üben</a></br>';
