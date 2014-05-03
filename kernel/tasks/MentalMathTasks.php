@@ -1,7 +1,9 @@
 <?php
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
 	function GenerateMentalMathTask($data)
 	{
-		$random = rand(1, 4);
+		$random = rand(1, 5);
 		
 		// add
 		if($random == 1)
@@ -51,5 +53,13 @@
 			$t = new SimpleQuestionAnswerType($z2 .":". $z1, $z2 / $z1);
 			return $t;
 		}
+
+        // square
+        if ($random == 5)
+        {
+            $z = rand(1, 15);
+            $t = new SimpleQuestionAnswerType($z."^"."2", pow($z, 2));
+            return $t;
+        }
 	}
 ?>
