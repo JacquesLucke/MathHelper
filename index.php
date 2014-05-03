@@ -27,7 +27,7 @@
 				<h1>Mathehilfe</h1>
 			</div>
 			<div id="status">
-				nothing done jet
+				<a href="?task=MostBasicMathTasks-.-GenerateBasicMathTask">Zum ersten Aufgabentyp</a>
 			</div>
 			<div id="currentTask">
 				<div id="actualTask">
