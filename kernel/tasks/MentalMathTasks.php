@@ -1,6 +1,4 @@
 <?php
-    error_reporting(E_ALL);
-    ini_set('display_errors', 1);
 	function GenerateMentalMathTask($data)
 	{
 		if($data == "") $random = rand(1, 6);
