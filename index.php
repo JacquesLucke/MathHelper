@@ -8,6 +8,8 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="styles/indexStyle.css">
+		<script src="external/plugins/noImageFonts.js"></script>
+		<script src="external/jsMath/jsMath.js"></script>
 		
 		<?php
 			if(isset($_GET['task'])) 
@@ -43,5 +45,8 @@
 		</div>
 		
 		<?php 	$task->AddScript(); ?>
+		<script>
+			jsMath.Process(document);
+		</script>
 	</body>
 </html>
