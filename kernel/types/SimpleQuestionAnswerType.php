@@ -36,7 +36,11 @@
 						margin: 20px;
 					}
 					#help{
-						text-align:left;
+						text-align: left;
+					}
+					#help span{
+						margin:10px;
+						display:block;
 					}
 				</style>
 			<?php
@@ -82,7 +86,7 @@
 		
 		public function AddTaskHelp()
 		{
-			echo "<div id='help'>". $this->help ."</div>";
+			echo "<div id='help'><span>". $this->help ."</span></div>";
 		}
 	}
 ?>
