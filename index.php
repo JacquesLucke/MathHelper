@@ -27,7 +27,7 @@
 				<h1>Mathehilfe</h1>
 			</div>
 			<div id="status">
-				<a href="?task=MostBasicMathTasks-.-GenerateBasicMathTask">Zum ersten Aufgabentyp</a>
+				<a href="?task=MostBasicMathTasks-.-GenerateMentalMathTask">Zum ersten Aufgabentyp</a>
 			</div>
 			<div id="currentTask">
 				<div id="actualTask">

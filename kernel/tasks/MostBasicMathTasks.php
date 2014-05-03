@@ -1,5 +1,5 @@
 <?php
-	function GenerateBasicMathTask($data)
+	function GenerateMentalMathTask($data)
 	{
 		$random = rand(1, 4);
 		
