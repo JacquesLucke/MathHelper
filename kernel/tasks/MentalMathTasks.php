@@ -78,11 +78,14 @@
 	
 	function GenerateFractionTask($data)
 	{
-		$z1 = rand(1, 20);
-		$z2 = rand(1, 20);
-		$z3 = rand(2, 20);
-		
-		ReduceFraction($z1, $z2);
+		do
+		{
+			$z1 = rand(1, 15);
+			$z2 = rand(1, 15);
+			$z3 = rand(2, 15);		
+			ReduceFraction($z1, $z2);
+		} 
+		while ($z2 == 1);
 	
 		$t = new SimpleQuestionAnswerType("Kürzen: <div class='math'>\\frac{". $z1 * $z3 ."}{". $z2 * $z3 ."}=</div>", $z1 ."/". $z2);
 		$t->jsMathUse = false;
