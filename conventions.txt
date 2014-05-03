@@ -1,5 +1,7 @@
 IDs -> "website", "navigationList", ...
 
+php adding strings together: space beetween . and a variable. no space next to " -> "bla". $z ."blu"
+
 Task description in URL:
 	seperator: -.-
 	1. file name
