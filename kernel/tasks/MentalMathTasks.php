@@ -3,7 +3,8 @@
     ini_set('display_errors', 1);
 	function GenerateMentalMathTask($data)
 	{
-		$random = rand(1, 5);
+		if($data == "") $random = rand(1, 6);
+		else $random = $data;
 		
 		// add
 		if($random == 1)
@@ -11,7 +12,7 @@
 			$z1 = rand(2, 100);
 			$z2 = rand(2, 100);
 			$t = new SimpleQuestionAnswerType($z1 ."+". $z2, $z1 + $z2);
-			return $t;
+			
 		}
 		
 		// subtract
@@ -20,7 +21,6 @@
 			$z1 = rand(2, 100);
 			$z2 = rand(2, 100);
 			$t = new SimpleQuestionAnswerType($z1 ."-". $z2, $z1 - $z2);
-			return $t;
 		}
 		
 		// multiply
@@ -33,7 +33,6 @@
 				$z1 = rand(2, 20);
 				$z2 = rand(2, 20);
 				$t = new SimpleQuestionAnswerType($z1 ."*". $z2, $z1 * $z2);
-				return $t;
 			}
 			// big difference
 			if($type == 3)
@@ -41,7 +40,6 @@
 				$z1 = rand(2, 10);
 				$z2 = rand(50, 1000);
 				$t = new SimpleQuestionAnswerType($z1 ."*". $z2, $z1 * $z2);
-				return $t;
 			}
 		}
 		
@@ -51,15 +49,30 @@
 			$z1 = rand(2, 50);
 			$z2 = $z1 * rand(2, 15);
 			$t = new SimpleQuestionAnswerType($z2 .":". $z1, $z2 / $z1);
-			return $t;
 		}
 
+		// square root
+		if($random == 5)
+		{
+			$z1 = rand(2, 20);
+			$z2 = $z1 * $z1;
+			$t = new SimpleQuestionAnswerType("\sqrt{". $z2 . "}", $z1);
+		} 
+
         // square
-        if ($random == 5)
+        if ($random == 6)
         {
             $z = rand(1, 15);
             $t = new SimpleQuestionAnswerType($z."^"."2", pow($z, 2));
             return $t;
         }
+		
+		$t->help = '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-1">nur Addition üben</a></br>';
+		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-2">nur Subtraktion üben</a></br>';
+		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-3">nur Multiplizieren üben</a></br>';
+		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-4">nur Dividieren üben</a></br>';
+		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-5">nur Wurzel ziehen üben</a></br>';
+		
+		return $t;
 	}
 ?>

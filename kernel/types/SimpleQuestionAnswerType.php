@@ -1,9 +1,10 @@
 <?php
 	class SimpleQuestionAnswerType
 	{
-		private $question;
-		private $answer;
+		public $question;
+		public $answer;
 		public $jsMathUse = true;
+		public $help = "keine Hilfe zu dieser Aufgabe vorhanden";
 	
 		public function __construct($question, $answer)
 		{
@@ -33,6 +34,9 @@
 					#nextTask{
 						font-size: 25px;
 						margin: 20px;
+					}
+					#help{
+						text-align:left;
 					}
 				</style>
 			<?php
@@ -78,7 +82,7 @@
 		
 		public function AddTaskHelp()
 		{
-			echo "hilfe";
+			echo "<div id='help'>". $this->help ."</div>";
 		}
 	}
 ?>
