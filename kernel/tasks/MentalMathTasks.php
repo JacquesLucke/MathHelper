@@ -79,7 +79,7 @@
 	
 	function GenerateFractionTask($data)
 	{
-		$random = rand(1, 2);
+		$random = rand(1, 3);
 		
 		// reduce
 		if($random == 1)
@@ -88,7 +88,6 @@
 			$factor = rand(2, 15);	
 		
 			$t = new SimpleQuestionAnswerType("K&uuml;rzen: <div class='math'>\\frac{". $a * $factor."}{". $b * $factor ."}=</div>", $a ."/". $b);
-			$t->jsMathUse = false;
 		}
 		
 		// add
@@ -99,13 +98,23 @@
 			AddFractions($a1, $b1, $a2, $b2, $resA, $resB);
 		
 			$t = new SimpleQuestionAnswerType("K&uuml;rzen: <div class='math'>\\frac{". $a1 ."}{". $b1 ."}+\\frac{". $a2 ."}{". $b2 ."}=</div>", $resA ."/". $resB);
-			$t->jsMathUse = false;
+		}
+		
+		// subtract
+		if($random == 3)
+		{
+			GenerateReducedFraction(15, $a1, $b1);
+			GenerateReducedFraction(15, $a2, $b2);
+			SubtractFractions($a1, $b1, $a2, $b2, $resA, $resB);
+		
+			$t = new SimpleQuestionAnswerType("K&uuml;rzen: <div class='math'>\\frac{". $a1 ."}{". $b1 ."}-\\frac{". $a2 ."}{". $b2 ."}=</div>", $resA ."/". $resB);
 		}
 		
 		$t->help = 'Beispiel: 3/4 ; 18/5';
 		$t->help .= '</br>';
 		$t->help .= '</br>';
 		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask">andere Kopfrechenaufgaben &uuml;ben</a></br>';
+		$t->jsMathUse = false;
 		return $t;
 	}
 ?>
