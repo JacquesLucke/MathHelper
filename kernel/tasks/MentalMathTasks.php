@@ -64,15 +64,15 @@
             $t = new SimpleQuestionAnswerType($z ."^2", pow($z, 2));
         }
 		
-		$t->help = '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask">alle üben</a></br>';
-		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-1">Addition üben</a></br>';
-		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-2">Subtraktion üben</a></br>';
-		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-3">Multiplizieren üben</a></br>';
-		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-4">Dividieren üben</a></br>';
-		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-5">Wurzel ziehen üben</a></br>';
-		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-6">Quadrieren üben</a></br>';
+		$t->help = '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask">alle &uuml;ben</a></br>';
+		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-1">Addition &uuml;ben</a></br>';
+		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-2">Subtraktion &uuml;ben</a></br>';
+		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-3">Multiplizieren &uuml;ben</a></br>';
+		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-4">Dividieren &uuml;ben</a></br>';
+		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-5">Wurzel ziehen &uuml;ben</a></br>';
+		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-6">Quadrieren &uuml;ben</a></br>';
 		$t->help .= '</br>';
-		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask">Brüche üben</a></br>';
+		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask">Br&uuml;che &uuml;ben</a></br>';
 		
 		return $t;
 	}
@@ -88,13 +88,13 @@
 		} 
 		while ($z2 == 1);
 	
-		$t = new SimpleQuestionAnswerType("Kürzen: <div class='math'>\\frac{". $z1 * $z3 ."}{". $z2 * $z3 ."}=</div>", $z1 ."/". $z2);
+		$t = new SimpleQuestionAnswerType("K&uuml;rzen: <div class='math'>\\frac{". $z1 * $z3 ."}{". $z2 * $z3 ."}=</div>", $z1 ."/". $z2);
 		$t->jsMathUse = false;
 		
 		$t->help = 'Beispiel: 3/4 ; 18/5';
 		$t->help .= '</br>';
 		$t->help .= '</br>';
-		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask">andere Kopfrechenaufgaben üben</a></br>';
+		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask">andere Kopfrechenaufgaben &uuml;ben</a></br>';
 		return $t;
 	}
 ?>

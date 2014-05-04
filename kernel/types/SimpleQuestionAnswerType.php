@@ -55,9 +55,9 @@
 			if($this->jsMathUse) echo "<div id='question'><div class='math'>". $this->question . "</div></div><br/>";
 			else echo "<div id='question'>". $this->question . "</div><br/>";
 			?>
-				<button onclick="ShowResult()" id="showResult">L�sung</button>
+				<button onclick="ShowResult()" id="showResult">L&ouml;sung</button>
 				<input id='resultTextBox' onkeyup="CheckResult(); if(event.keyCode == 13) Next();"></input>
-				<button onclick="Next()" id="nextTask">N�chste</button>
+				<button onclick="Next()" id="nextTask">N&auml;chste</button>
 			<?php
 		}
 		
