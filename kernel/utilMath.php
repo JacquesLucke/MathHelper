@@ -14,6 +14,13 @@
 		}
 	}
 	
+	function KGV(&$a, &$b)
+	{
+		$ggt = GGT($a, $b);
+		$a *= $ggt;
+		$b *= $ggt;
+	}
+	
 	function ReduceFraction(&$a, &$b)
 	{
 		$ggt = GGT($a, $b);
