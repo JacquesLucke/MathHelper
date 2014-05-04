@@ -12,6 +12,8 @@
 <!DOCTYPE html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="styles/indexStyle.css">
+		
+		<!-- load jsMath library -->
 		<script src="external/jsMath/plugins/noImageFonts.js"></script>
 		<script src="external/jsMath/jsMath.js"></script>
 		
