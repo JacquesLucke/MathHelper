@@ -56,6 +56,7 @@
 		{
 			?>
 				<script language="javascript">
+                    document.getElementById("resultTextBox").value = "";
 					var result = "<?=$this->answer?>";
 					document.getElementById("resultTextBox").focus();
 					function CheckResult()
