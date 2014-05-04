@@ -1,5 +1,5 @@
 <?php
-	include("helper.php");
+	include("utilMath.php");
 	include("types/SimpleQuestionAnswerType.php");
 	
 	function GetTaskFromString($taskString)
