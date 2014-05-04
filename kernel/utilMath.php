@@ -27,25 +27,4 @@
 		$a /= $ggt;
 		$b /= $ggt;
 	}
-	
-	class Fraction
-	{
-		// numerator, so short to keep the usage simple
-		public $a = 1;
-		// denominator
-		public $b = 1;
-		
-		public function __construct($numerator, $denominator)
-		{
-			$this->a = $numerator;
-			$this->b = $denominator;
-		}
-		
-		public function Reduce()
-		{
-			$ggt = GGT($this->a, $this->b);
-			$this->a *= $ggt;
-			$this->b *= $ggt;
-		}
-	}
 ?>
