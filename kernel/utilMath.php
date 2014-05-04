@@ -20,6 +20,9 @@
 		$ggt = GGT($a, $b);
 		$a /= $ggt;
 		$b /= $ggt;
+		// change sign so that there is no minus or at least at the numerator
+		if($a * $b < 0) { $a = -abs($a); $b = abs($b); }
+		if($a < 0 && $b < 0) { $a = abs($b); $b = abs($b); }
 	}
 	
 	// a and b are the outputs. $max is the highest possible number for $a and $b
@@ -38,7 +41,7 @@
 	function AddFractions($a1, $b1, $a2, $b2, &$resA, &$resB)
 	{
 		$kgv = KGV($b1, $b2);
-		$resA = ($a1 / $b1 + $a2 / $b2) * $kgv;
+		$resA = $a1 * $b2 + $a2 * $b1;
 		$resB = $kgv;
 		ReduceFraction($resA, $resB);
 	}
@@ -46,7 +49,7 @@
 	function SubtractFractions($a1, $b1, $a2, $b2, &$resA, &$resB)
 	{
 		$kgv = KGV($b1, $b2);
-		$resA = ($a1 / $b1 - $a2 / $b2) * $kgv;
+		$resA = $a1 * $b2 - $a2 * $b1;
 		$resB = $kgv;
 		ReduceFraction($resA, $resB);
 	}
