@@ -79,17 +79,28 @@
 	
 	function GenerateFractionTask($data)
 	{
-		do
+		$random = rand(1, 2);
+		
+		// reduce
+		if($random == 1)
 		{
-			$z1 = rand(1, 15);
-			$z2 = rand(1, 15);
-			$z3 = rand(2, 15);		
-			ReduceFraction($z1, $z2);
-		} 
-		while ($z2 == 1);
-	
-		$t = new SimpleQuestionAnswerType("K&uuml;rzen: <div class='math'>\\frac{". $z1 * $z3 ."}{". $z2 * $z3 ."}=</div>", $z1 ."/". $z2);
-		$t->jsMathUse = false;
+			GenerateReducedFraction(15, $a, $b);
+			$factor = rand(2, 15);	
+		
+			$t = new SimpleQuestionAnswerType("K&uuml;rzen: <div class='math'>\\frac{". $a * $factor."}{". $b * $factor ."}=</div>", $a ."/". $b);
+			$t->jsMathUse = false;
+		}
+		
+		// add
+		if($random == 2)
+		{
+			GenerateReducedFraction(15, $a1, $b1);
+			GenerateReducedFraction(15, $a2, $b2);
+			AddFractions($a1, $b1, $a2, $b2, $resA, $resB);
+		
+			$t = new SimpleQuestionAnswerType("K&uuml;rzen: <div class='math'>\\frac{". $a1 ."}{". $b1 ."}+\\frac{". $a2 ."}{". $b2 ."}=</div>", $resA ."/". $resB);
+			$t->jsMathUse = false;
+		}
 		
 		$t->help = 'Beispiel: 3/4 ; 18/5';
 		$t->help .= '</br>';

@@ -26,34 +26,46 @@
 		$b /= $ggt;
 	}
 	
-	// a1/b1 + a2/b2 = ergA/ergB
-	function AddFractions($a1, $b1, $a2, $b2, &$ergA, &$ergB)
+	// a and b are the outputs. $max is the highest possible number for $a and $b
+	function GenerateReducedFraction($max, &$a, &$b)
+	{
+		do
+		{
+			$a = rand(1, $max);
+			$b = rand(1, $max);	
+			ReduceFraction($a, $b);
+		} 
+		while ($b == 1);	
+	}
+	
+	// a1/b1 + a2/b2 = resA/resB
+	function AddFractions($a1, $b1, $a2, $b2, &$resA, &$resB)
 	{
 		$kgv = KGV($b1, $b2);
-		$ergA = ($a1 / $b1 + $a2 / $b2) * $kgv;
-		$ergB = $kgv;
-		ReduceFraction($ergA, $ergB);
+		$resA = ($a1 / $b1 + $a2 / $b2) * $kgv;
+		$resB = $kgv;
+		ReduceFraction($resA, $resB);
 	}
-	// a1/b1 - a2/b2 = ergA/ergB
-	function SubtractFractions($a1, $b1, $a2, $b2, &$ergA, &$ergB)
+	// a1/b1 - a2/b2 = resA/resB
+	function SubtractFractions($a1, $b1, $a2, $b2, &$resA, &$resB)
 	{
 		$kgv = KGV($b1, $b2);
-		$ergA = ($a1 / $b1 - $a2 / $b2) * $kgv;
-		$ergB = $kgv;
-		ReduceFraction($ergA, $ergB);
+		$resA = ($a1 / $b1 - $a2 / $b2) * $kgv;
+		$resB = $kgv;
+		ReduceFraction($resA, $resB);
 	}
-	// a1/b1 * a2/b2 = ergA/ergB
-	function MultiplyFractions($a1, $b1, $a2, $b2, &$ergA, &$ergB)
+	// a1/b1 * a2/b2 = resA/resB
+	function MultiplyFractions($a1, $b1, $a2, $b2, &$resA, &$resB)
 	{
-		$ergA = $a1 * $a2;
-		$ergB = $b1 * $b2;
-		ReduceFraction($ergA, $ergB);
+		$resA = $a1 * $a2;
+		$resB = $b1 * $b2;
+		ReduceFraction($resA, $resB);
 	}
-	// a1/b1 : a2/b2 = ergA/ergB
-	function DivideFractions($a1, $b1, $a2, $b2, &$ergA, &$ergB)
+	// a1/b1 : a2/b2 = resA/resB
+	function DivideFractions($a1, $b1, $a2, $b2, &$resA, &$resB)
 	{
-		$ergA = $a1 * $b2;
-		$ergB = $b1 * $a2;
-		ReduceFraction($ergA, $ergB);
+		$resA = $a1 * $b2;
+		$resB = $b1 * $a2;
+		ReduceFraction($resA, $resB);
 	}
 ?>
