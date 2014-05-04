@@ -10,7 +10,7 @@
 		return $a;
 	}
 	
-	function KGV(&$a, &$b)
+	function KGV($a, $b)
 	{
 		return $a * $b / GGT($a, $b);
 	}
@@ -25,32 +25,31 @@
 		if($a < 0 && $b < 0) { $a = abs($b); $b = abs($b); }
 	}
 	
-	// a and b are the outputs. $max is the highest possible number for $a and $b
-	function GenerateReducedFraction($max, &$a, &$b)
+	// a and b are the outputs. $max is the highest possible number for $a and $b; $reduced will run a loop until there is a good fraction
+	function GenerateFraction($max, &$a, &$b, $reduced = true)
 	{
 		do
 		{
 			$a = rand(1, $max);
 			$b = rand(1, $max);	
-			ReduceFraction($a, $b);
+			if($reduced) ReduceFraction($a, $b);
 		} 
-		while ($b == 1);	
+		while ($b == 1);
+		
 	}
 	
 	// a1/b1 + a2/b2 = resA/resB
 	function AddFractions($a1, $b1, $a2, $b2, &$resA, &$resB)
 	{
-		$kgv = KGV($b1, $b2);
 		$resA = $a1 * $b2 + $a2 * $b1;
-		$resB = $kgv;
+		$resB = $b1 * $b2;
 		ReduceFraction($resA, $resB);
 	}
 	// a1/b1 - a2/b2 = resA/resB
 	function SubtractFractions($a1, $b1, $a2, $b2, &$resA, &$resB)
 	{
-		$kgv = KGV($b1, $b2);
 		$resA = $a1 * $b2 - $a2 * $b1;
-		$resB = $kgv;
+		$resB = $b1 * $b2;
 		ReduceFraction($resA, $resB);
 	}
 	// a1/b1 * a2/b2 = resA/resB

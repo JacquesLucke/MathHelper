@@ -84,7 +84,7 @@
 		// reduce
 		if($random == 1)
 		{
-			GenerateReducedFraction(15, $a, $b);
+			GenerateFraction(15, $a, $b, true);
 			$factor = rand(2, 15);	
 		
 			$t = new SimpleQuestionAnswerType("K&uuml;rzen: <div class='math'>\\frac{". $a * $factor."}{". $b * $factor ."}</div>", $a ."/". $b);
@@ -93,8 +93,8 @@
 		// add
 		if($random == 2)
 		{
-			GenerateReducedFraction(15, $a1, $b1);
-			GenerateReducedFraction(15, $a2, $b2);
+			GenerateFraction(15, $a1, $b1, false);
+			GenerateFraction(15, $a2, $b2, false);
 			AddFractions($a1, $b1, $a2, $b2, $resA, $resB);
 		
 			$t = new SimpleQuestionAnswerType("<div class='math'>\\frac{". $a1 ."}{". $b1 ."}+\\frac{". $a2 ."}{". $b2 ."}</div>", $resA ."/". $resB);
@@ -103,8 +103,8 @@
 		// subtract
 		if($random == 3)
 		{
-			GenerateReducedFraction(15, $a1, $b1);
-			GenerateReducedFraction(15, $a2, $b2);
+			GenerateFraction(15, $a1, $b1, false);
+			GenerateFraction(15, $a2, $b2, false);
 			SubtractFractions($a1, $b1, $a2, $b2, $resA, $resB);
 		
 			$t = new SimpleQuestionAnswerType("<div class='math'>\\frac{". $a1 ."}{". $b1 ."}-\\frac{". $a2 ."}{". $b2 ."}</div>", $resA ."/". $resB);
