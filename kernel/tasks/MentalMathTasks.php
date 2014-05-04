@@ -80,7 +80,7 @@
 	
 	function GenerateFractionTask($data)
 	{
-		$numTaskTypes = 6;
+		$numTaskTypes = 7;
 		if($data == "" || $data < 1 || $data > $numTaskTypes) $random = rand(1, $numTaskTypes);
 		else $random = $data;
 		
@@ -152,6 +152,24 @@
 			else $t = new SimpleQuestionAnswerType("<div class='math'>\\root ". $exponent ." \of {\\frac{". pow($a, $exponent) ."}{". pow($b, $exponent) ."}}</div>", $a ."/". $b);
 		}
 		
+		// potenz
+		if($random == 7)
+		{
+			$exponent = rand(2, 5);
+			// make the exponent 2 appear more often
+			if($exponent < 5) 
+			{
+				$exponent = 2; 
+				GenerateFraction(15, $a, $b, true);
+			}
+			else
+			{
+				$exponent = 3;
+				GenerateFraction(6, $a, $b, true);
+			}
+			$t = new SimpleQuestionAnswerType("<div class='math'>{(\\frac{". $a ."}{". $b ."}})^". $exponent ."</div>", pow($a, $exponent) ."/". pow($b, $exponent));
+		}
+		
 		$t->help = 'Beispiel: 3/4 ; 18/5';
 		$t->help .= '</br>';
 		$t->help .= '</br>';
@@ -162,13 +180,14 @@
 		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask-.-4">Multiplikation &uuml;ben</a></br>';
 		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask-.-5">Division &uuml;ben</a></br>';
 		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask-.-6">Wurzel ziehen &uuml;ben</a></br>';
+		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask-.-7">Potenzieren &uuml;ben</a></br>';
 		$t->help .= '</br>';
 		$t->help .= '</br>';
 		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask">andere Kopfrechenaufgaben &uuml;ben</a></br>';
 		$t->jsMathUse = false;
 		
 		// check if the fraction is an integer
-		if($random != 1 || $random != 6) if($resB == 1) $t->answer = $resA;
+		if(!($random == 1 || $random == 6 || $random == 7)) if($resB == 1) $t->answer = $resA;
 		
 		return $t;
 	}
