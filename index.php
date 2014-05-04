@@ -12,7 +12,7 @@
 <!DOCTYPE html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="styles/indexStyle.css">
-		<script src="external/plugins/noImageFonts.js"></script>
+		<script src="external/jsMath/plugins/noImageFonts.js"></script>
 		<script src="external/jsMath/jsMath.js"></script>
 		
 		<?php
