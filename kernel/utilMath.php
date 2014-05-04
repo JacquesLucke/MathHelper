@@ -16,9 +16,7 @@
 	
 	function KGV(&$a, &$b)
 	{
-		$ggt = GGT($a, $b);
-		$a *= $ggt;
-		$b *= $ggt;
+		return $a * $b / GGT($a, $b);
 	}
 	
 	function ReduceFraction(&$a, &$b)
@@ -26,5 +24,34 @@
 		$ggt = GGT($a, $b);
 		$a /= $ggt;
 		$b /= $ggt;
+	}
+	
+	// a1/b1 + a2/b2 = ergA/ergB
+	function AddFractions($a1, $b1, $a2, $b2, &$ergA, &$ergB)
+	{
+		$kgv = KGV($b1, $b2);
+		$ergA = ($a1 / $b1 + $a2 / $b2) * $kgv;
+		$ergB = $kgv;
+		ReduceFraction($ergA, $ergB);
+	}
+	// a1/b1 - a2/b2 = ergA/ergB
+	function SubtractFractions($a1, $b1, $a2, $b2, &$ergA, &$ergB)
+	{
+		$kgv = KGV($b1, $b2);
+		$ergA = ($a1 / $b1 - $a2 / $b2) * $kgv;
+		$ergB = $kgv;
+		ReduceFraction($ergA, $ergB);
+	}
+	// a1/b1 * a2/b2 = ergA/ergB
+	function MultiplyFractions($a1, $b1, $a2, $b2, &$ergA, &$ergB)
+	{
+		$ergA = $a1 * $a2;
+		$ergB = $b1 * $b2;
+	}
+	// a1/b1 : a2/b2 = ergA/ergB
+	function DivideFractions($a1, $b1, $a2, $b2, &$ergA, &$ergB)
+	{
+		$ergA = $a1 * $b2;
+		$ergB = $b1 * $a2;
 	}
 ?>
