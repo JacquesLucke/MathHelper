@@ -159,7 +159,8 @@
 							
 							function CheckResult()
 							{
-								var r = document.getElementById("fractionResultTextBoxA").value + "/" + document.getElementById("fractionResultTextBoxB").value ;
+								if(result.indexOf("/") > -1) var r = document.getElementById("fractionResultTextBoxA").value + "/" + document.getElementById("fractionResultTextBoxB").value;
+								else var r = document.getElementById("fractionResultTextBoxA").value;
 								if(r == result)
 								{
 									document.getElementById("fractionResultTextBoxA").style.backgroundColor = "rgb(153, 255, 196)";
@@ -175,8 +176,9 @@
 							function ShowResult()
 							{
 								var fraction = result.split("/");
+								
+								if(result.indexOf("/") > -1) document.getElementById("fractionResultTextBoxB").value = fraction[1];
 								document.getElementById("fractionResultTextBoxA").value = fraction[0];
-								document.getElementById("fractionResultTextBoxB").value = fraction[1];
 								document.getElementById("fractionResultTextBoxA").style.backgroundColor = "rgb(153, 255, 196)";
 								document.getElementById("fractionResultTextBoxB").style.backgroundColor = "rgb(153, 255, 196)";
 							}
