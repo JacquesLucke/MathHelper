@@ -47,11 +47,13 @@
 	{
 		$ergA = $a1 * $a2;
 		$ergB = $b1 * $b2;
+		ReduceFraction($ergA, $ergB);
 	}
 	// a1/b1 : a2/b2 = ergA/ergB
 	function DivideFractions($a1, $b1, $a2, $b2, &$ergA, &$ergB)
 	{
 		$ergA = $a1 * $b2;
 		$ergB = $b1 * $a2;
+		ReduceFraction($ergA, $ergB);
 	}
 ?>
