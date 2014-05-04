@@ -9,7 +9,7 @@
 ?>
 
 
-<html>
+<!DOCTYPE html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="styles/indexStyle.css">
 		<script src="external/plugins/noImageFonts.js"></script>
