@@ -72,6 +72,7 @@
 		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-5">Wurzel ziehen &uuml;ben</a></br>';
 		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-6">Quadrieren &uuml;ben</a></br>';
 		$t->help .= '</br>';
+		$t->help .= '</br>';
 		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask">Br&uuml;che &uuml;ben</a></br>';
 		
 		return $t;
@@ -79,7 +80,9 @@
 	
 	function GenerateFractionTask($data)
 	{
-		$random = rand(1, 5);
+		$numTaskTypes = 5;
+		if($data == "" || $data < 1 || $data > $numTaskTypes) $random = rand(1, $numTaskTypes);
+		else $random = $data;
 		
 		// reduce
 		if($random == 1)
@@ -133,10 +136,18 @@
 		$t->help = 'Beispiel: 3/4 ; 18/5';
 		$t->help .= '</br>';
 		$t->help .= '</br>';
+		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask">alles mit Br&uuml;chen &uuml;ben</a></br>';
+		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask-.-1">K&uuml;rzen &uuml;ben</a></br>';
+		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask-.-2">Addition &uuml;ben</a></br>';
+		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask-.-3">Subtraktion &uuml;ben</a></br>';
+		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask-.-4">Multiplikation &uuml;ben</a></br>';
+		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask-.-5">Division &uuml;ben</a></br>';
+		$t->help .= '</br>';
+		$t->help .= '</br>';
 		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask">andere Kopfrechenaufgaben &uuml;ben</a></br>';
 		$t->jsMathUse = false;
 		
-		if($resB == 1) $t->answer = $resA;
+		if($random != 1) if($resB == 1) $t->answer = $resA;
 		
 		return $t;
 	}
