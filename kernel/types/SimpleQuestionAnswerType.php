@@ -62,6 +62,11 @@
 									width: 200px;
 									margin-top: 40px;
 								}
+								.inputButton{
+									font-size: 25px;
+									width: 40px;
+									background-color: rgb(210, 210, 210);
+								}
 							
 							/* next task button */
 							#next{
@@ -99,7 +104,9 @@
 						<div id="input">
 							<input id='resultTextBox' onkeyup='CheckResult(); if(event.keyCode == 13) Next();'></input>
 							<div id="operators">
-								<button id="sqrtButton">√</button>
+								<button class="inputButton" onclick="AddChar('&#x221a;')" >&#x221a;</button>
+								<button class="inputButton" onclick="AddChar('&#x221b;')" >&#x221b;</button>
+								<button class="inputButton" onclick="AddChar('&#x221c;')" >&#x221c;</button>
 							</div>
 						</div>
 						<div id="next"><button onclick="Next()" id="nextTaskButton">N&auml;chste</button></div>
@@ -132,13 +139,21 @@
 					
 					function ShowResult()
 					{
-						document.getElementById("resultTextBox").value = result + "√";
+						document.getElementById("resultTextBox").value = result;
 						document.getElementById("resultTextBox").style.backgroundColor = "rgb(153, 255, 196)";
 					}		
 
 					function Next()
 					{
 						window.location.reload();
+					}
+					
+					function AddChar(text)
+					{
+						var position = document.getElementById("resultTextBox").selectionStart;
+						var val = document.getElementById("resultTextBox").value;
+						document.getElementById("resultTextBox").value = val.substr(0, position) + text + val.substr(position);
+						document.getElementById("resultTextBox").setSelectionRange(position + 1, position + 1);
 					}
 				</script>
 			<?php
