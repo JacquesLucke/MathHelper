@@ -185,7 +185,6 @@
 		$t->help .= '</br>';
 		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask">andere Kopfrechenaufgaben &uuml;ben</a></br>';
 		$t->jsMathUse = false;
-		$t->inputType = "fraction";
 		
 		// check if the fraction is an integer
 		if(!($random == 1 || $random == 6 || $random == 7)) if($resB == 1) $t->answer = $resA;
