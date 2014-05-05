@@ -96,7 +96,12 @@
 				?>
 					<div id="answerBar">
 						<div id="show"><button id="showResultButton" onmousedown="ShowResult()" >L&ouml;sung</button></div>
-						<div id="input"><input id='resultTextBox' onkeyup='CheckResult(); if(event.keyCode == 13) Next();'></input></div>
+						<div id="input">
+							<input id='resultTextBox' onkeyup='CheckResult(); if(event.keyCode == 13) Next();'></input>
+							<div id="operators">
+								<button id="sqrtButton">√</button>
+							</div>
+						</div>
 						<div id="next"><button onclick="Next()" id="nextTaskButton">N&auml;chste</button></div>
 					</div>
 			</div>		
@@ -106,7 +111,7 @@
 		public function AddScript()
 		{
 			?>
-				<script language="javascript">
+				<script language="javascript" charset="UTF-8">
 					var result = "<?=$this->answer?>";
 					document.getElementById("resultTextBox").focus();
 					document.getElementById("resultTextBox").value = "";
@@ -127,7 +132,7 @@
 					
 					function ShowResult()
 					{
-						document.getElementById("resultTextBox").value = result;
+						document.getElementById("resultTextBox").value = result + "√";
 						document.getElementById("resultTextBox").style.backgroundColor = "rgb(153, 255, 196)";
 					}		
 

@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 	// should be off, when committing to master
 	//error_reporting(E_ALL);
     //ini_set('display_errors', 1);
