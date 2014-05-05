@@ -61,11 +61,13 @@
 									font-size: 35px;
 									width: 200px;
 									margin-top: 40px;
+									margin-bottom: 5px;
 								}
 								.inputButton{
 									font-size: 25px;
 									width: 40px;
 									background-color: rgb(210, 210, 210);
+									margin: 0px;
 								}
 							
 							/* next task button */
