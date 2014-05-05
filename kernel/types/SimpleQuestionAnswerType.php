@@ -21,55 +21,60 @@
 		{
 			?>
 				<style>
+					
 					#completeTask{
 						position: relative;
 						height: 500px;
 					}
 				
-					#question{
-						font-size:400%;
+						#question{
+							font-size:400%;
+							
+							margin: 20px;
+							margin-top: 60px;
+						}
 						
-						margin: 20px;
-						margin-top: 60px;
-					}
-					
-					#answerBar{
-						position: absolute;
-						bottom: 0px;
-						right: 20px;
-						left: 20px;
-					}
-					
-					#show{
-						float: left;
-						width: 33%;
-						margin-top: 40px;
-					}
-					#input{
-						float: left;
-						width: 33%;
-					}
-					#next{
-						float: left;
-						width: 33%;
-						margin-top: 40px;
-					}
-					#showResult{
-						float: right;
-						margin-right: 50px;
-						font-size: 25px;
-					}
-					#nextTask{
-						float: left;
-						margin-left: 50px;
-						font-size: 25px;
-					}
-					#normalResultTextBox{
-						font-size: 35px;
-						width: 200px;
-						margin-top: 40px;
-					}
-					
+						#answerBar{
+							position: absolute;
+							bottom: 0px;
+							right: 20px;
+							left: 20px;
+						}
+							/* show result button */
+							#show{
+								float: left;
+								width: 33%;
+								margin-top: 40px;
+							}
+								#showResultButton{
+									float: right;
+									margin-right: 50px;
+									font-size: 25px;
+								}
+							
+							/* input textbox */
+							#input{
+								float: left;
+								width: 33%;
+							}
+								#resultTextBox{
+									font-size: 35px;
+									width: 200px;
+									margin-top: 40px;
+								}
+							
+							/* next task button */
+							#next{
+								float: left;
+								width: 33%;
+								margin-top: 40px;
+							}
+								#nextTaskButton{
+									float: left;
+									margin-left: 50px;
+									font-size: 25px;
+								}
+						
 					#help{
 						text-align: left;
 					}
@@ -90,9 +95,9 @@
 				else echo "<div id='question'>". $this->question . "</div><br/>";
 				?>
 					<div id="answerBar">
-						<div id="show"><button id="showResult" onmousedown="ShowResult()" >L&ouml;sung</button></div>
-						<div id="input"><input id='normalResultTextBox' onkeyup='CheckResult(); if(event.keyCode == 13) Next();'></input></div>
-						<div id="next"><button onclick="Next()" id="nextTask">N&auml;chste</button></div>
+						<div id="show"><button id="showResultButton" onmousedown="ShowResult()" >L&ouml;sung</button></div>
+						<div id="input"><input id='resultTextBox' onkeyup='CheckResult(); if(event.keyCode == 13) Next();'></input></div>
+						<div id="next"><button onclick="Next()" id="nextTaskButton">N&auml;chste</button></div>
 					</div>
 			</div>		
 			<?php
@@ -103,27 +108,27 @@
 			?>
 				<script language="javascript">
 					var result = "<?=$this->answer?>";
-					document.getElementById("normalResultTextBox").focus();
-					document.getElementById("normalResultTextBox").value = "";
+					document.getElementById("resultTextBox").focus();
+					document.getElementById("resultTextBox").value = "";
 					
 					function CheckResult()
 					{
-						var r = document.getElementById("normalResultTextBox").value;
+						var r = document.getElementById("resultTextBox").value;
 						if(r == result)
 						{
-							document.getElementById("normalResultTextBox").style.backgroundColor = "rgb(153, 255, 196)";
+							document.getElementById("resultTextBox").style.backgroundColor = "rgb(153, 255, 196)";
 						}
 						else
 						{
-							document.getElementById("normalResultTextBox").style.backgroundColor = "rgb(255, 188, 183)";
-							document.getElementById("normalResultTextBox").focus();
+							document.getElementById("resultTextBox").style.backgroundColor = "rgb(255, 188, 183)";
+							document.getElementById("resultTextBox").focus();
 						}
 					} 
 					
 					function ShowResult()
 					{
-						document.getElementById("normalResultTextBox").value = result;
-						document.getElementById("normalResultTextBox").style.backgroundColor = "rgb(153, 255, 196)";
+						document.getElementById("resultTextBox").value = result;
+						document.getElementById("resultTextBox").style.backgroundColor = "rgb(153, 255, 196)";
 					}		
 
 					function Next()
