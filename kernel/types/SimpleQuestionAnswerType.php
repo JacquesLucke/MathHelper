@@ -107,8 +107,6 @@
 							<input id='resultTextBox' onkeyup='CheckResult(); if(event.keyCode == 13) Next();'></input>
 							<div id="operators">
 								<button class="inputButton" onclick="AddChar('&#x221a;')" >&#x221a;</button>
-								<button class="inputButton" onclick="AddChar('&#x221b;')" >&#x221b;</button>
-								<button class="inputButton" onclick="AddChar('&#x221c;')" >&#x221c;</button>
 							</div>
 						</div>
 						<div id="next"><button onclick="Next()" id="nextTaskButton">N&auml;chste</button></div>
