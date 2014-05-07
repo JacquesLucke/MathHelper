@@ -159,6 +159,11 @@
 						{
 							document.getElementById("resultTextBox").value = Insert(document.getElementById("resultTextBox").value, "(", position + 1);
 							document.getElementById("resultTextBox").value = Insert(document.getElementById("resultTextBox").value, ")", end + 2);
+							
+							if(position == end)
+							{
+								document.getElementById("resultTextBox").setSelectionRange(position + 2, position + 2);
+							}
 						}
 						
 						
