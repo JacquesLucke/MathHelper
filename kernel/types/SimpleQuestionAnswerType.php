@@ -106,7 +106,7 @@
 						<div id="input">
 							<input id='resultTextBox' onkeyup='CheckResult(); if(event.keyCode == 13) Next();'></input>
 							<div id="operators">
-								<button class="inputButton" onclick="AddChar('&#x221a;')" >&#x221a;</button>
+								<button class="inputButton" onclick="AddText('&#x221a;', true)" >&#x221a;</button>
 							</div>
 						</div>
 						<div id="next"><button onclick="Next()" id="nextTaskButton">N&auml;chste</button></div>
@@ -148,12 +148,25 @@
 						window.location.reload();
 					}
 					
-					function AddChar(text)
+					function AddText(text, addBrackets)
 					{
 						var position = document.getElementById("resultTextBox").selectionStart;
-						var val = document.getElementById("resultTextBox").value;
-						document.getElementById("resultTextBox").value = val.substr(0, position) + text + val.substr(position);
+						var end = document.getElementById("resultTextBox").selectionEnd;
+						document.getElementById("resultTextBox").value = Insert(document.getElementById("resultTextBox").value, text, position);
 						document.getElementById("resultTextBox").setSelectionRange(position + 1, position + 1);
+						
+						if(addBrackets)
+						{
+							document.getElementById("resultTextBox").value = Insert(document.getElementById("resultTextBox").value, "(", position + 1);
+							document.getElementById("resultTextBox").value = Insert(document.getElementById("resultTextBox").value, ")", end + 2);
+						}
+						
+						
+					}
+					
+					function Insert(text, insertion, position)
+					{
+						return text.substr(0, position) + insertion + text.substr(position);
 					}
 				</script>
 			<?php
