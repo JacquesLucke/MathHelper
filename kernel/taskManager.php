@@ -1,4 +1,4 @@
-<?php
+ï»¿<?php
 	include("utilMath.php");
 	include("types/SimpleQuestionAnswerType.php");
 	
@@ -22,7 +22,7 @@
 	{
 		public function SetTaskTitle()
 		{
-			echo "<title>Url ungültig</title>";
+			echo "<title>Url ungÃ¼ltig</title>";
 		}
 
 		public function AddTaskStyle()
@@ -31,7 +31,7 @@
 		
 		public function AddTask()
 		{
-			echo "ungültige Url";
+			echo "ungÃ¼ltige Url";
 		}
 		
 		public function AddTaskHelp()

@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 	function GenerateMentalMathTask($data)
 	{
 		$numTaskTypes = 6;
@@ -64,16 +64,16 @@
             $t = new SimpleQuestionAnswerType($z ."^2", pow($z, 2));
         }
 		
-		$t->help = '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask">alle &uuml;ben</a></br>';
-		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-1">Addition &uuml;ben</a></br>';
-		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-2">Subtraktion &uuml;ben</a></br>';
-		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-3">Multiplizieren &uuml;ben</a></br>';
-		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-4">Dividieren &uuml;ben</a></br>';
-		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-5">Wurzel ziehen &uuml;ben</a></br>';
-		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-6">Quadrieren &uuml;ben</a></br>';
+		$t->help = '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask">alle üben</a></br>';
+		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-1">Addition üben</a></br>';
+		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-2">Subtraktion üben</a></br>';
+		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-3">Multiplizieren üben</a></br>';
+		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-4">Dividieren üben</a></br>';
+		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-5">Wurzel ziehen üben</a></br>';
+		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-6">Quadrieren üben</a></br>';
 		$t->help .= '</br>';
 		$t->help .= '</br>';
-		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask">Br&uuml;che &uuml;ben</a></br>';
+		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask">Brüche üben</a></br>';
 		
 		return $t;
 	}
@@ -90,7 +90,7 @@
 			GenerateFraction(15, $a, $b, true);
 			$factor = rand(2, 15);	
 		
-			$t = new SimpleQuestionAnswerType("K&uuml;rzen: <div class='math'>\\frac{". $a * $factor."}{". $b * $factor ."}</div>", $a ."/". $b);
+			$t = new SimpleQuestionAnswerType("Kürzen: <div class='math'>\\frac{". $a * $factor."}{". $b * $factor ."}</div>", $a ."/". $b);
 		}
 		
 		// add
@@ -173,17 +173,17 @@
 		$t->help = 'Beispiel: 3/4 ; 18/5';
 		$t->help .= '</br>';
 		$t->help .= '</br>';
-		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask">alles mit Br&uuml;chen &uuml;ben</a></br>';
-		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask-.-1">K&uuml;rzen &uuml;ben</a></br>';
-		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask-.-2">Addition &uuml;ben</a></br>';
-		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask-.-3">Subtraktion &uuml;ben</a></br>';
-		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask-.-4">Multiplikation &uuml;ben</a></br>';
-		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask-.-5">Division &uuml;ben</a></br>';
-		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask-.-6">Wurzel ziehen &uuml;ben</a></br>';
-		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask-.-7">Potenzieren &uuml;ben</a></br>';
+		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask">alles mit Brüchen üben</a></br>';
+		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask-.-1">Kürzen üben</a></br>';
+		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask-.-2">Addition üben</a></br>';
+		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask-.-3">Subtraktion üben</a></br>';
+		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask-.-4">Multiplikation üben</a></br>';
+		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask-.-5">Division üben</a></br>';
+		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask-.-6">Wurzel ziehen üben</a></br>';
+		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask-.-7">Potenzieren üben</a></br>';
 		$t->help .= '</br>';
 		$t->help .= '</br>';
-		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask">andere Kopfrechenaufgaben &uuml;ben</a></br>';
+		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask">andere Kopfrechenaufgaben üben</a></br>';
 		$t->jsMathUse = false;
 		
 		// check if the fraction is an integer

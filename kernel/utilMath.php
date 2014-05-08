@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 	function GGT($a, $b)
 	{
 		while($b != 0)
