@@ -4,7 +4,8 @@
 		public $question;
 		public $answer;
 		public $jsMathUse = true;
-		public $links = "keine Hilfe zu dieser Aufgabe vorhanden";
+		public $links = "keine Links zu dieser Aufgabe vorhanden";
+		public $help;
 	
 		public function __construct($question, $answer)
 		{
@@ -180,6 +181,11 @@
 		public function AddTaskLinks()
 		{
 			echo "<div id='links'><span>". $this->links ."</span></div>";
+		}
+		
+		public function AddHelp()
+		{
+			echo $this->help;
 		}
 	}
 ?>

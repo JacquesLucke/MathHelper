@@ -47,6 +47,10 @@
 					<?php 	$task->AddTaskLinks(); ?>
 				</div>
 			</div>
+			<div id="help">
+				<button id="helpSwitchButton" onclick="SwitchHelpWindow()">Wie ging das nochmal?</button>
+				<div id="helpWindow"><?php 	$task->AddHelp(); ?></div>
+			</div>
 			<div id="footer">
 				<span>von Jacques Lucke</span>
 			</div>
@@ -55,6 +59,24 @@
 		<?php 	$task->AddScript(); ?>
 		<script>
 			jsMath.Process(document);
+			
+			document.getElementById('helpWindow').style.display = "none";
+			function SwitchHelpWindow()
+			{
+				var help = document.getElementById('helpWindow');
+				var button = document.getElementById('helpSwitchButton');
+				
+				if(help.style.display == "none")
+				{
+					help.style.display = 'block';
+					button.innerHTML = "Hilfe ausblenden";
+				}
+				else
+				{
+					help.style.display = 'none';
+					button.innerHTML = "Wie ging das nochmal?";
+				}
+			}
 		</script>
 	</body>
 </html>

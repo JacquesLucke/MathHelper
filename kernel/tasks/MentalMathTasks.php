@@ -121,6 +121,8 @@
 			MultiplyFractions($a1, $b1, $a2, $b2, $resA, $resB);
 		
 			$t = new SimpleQuestionAnswerType("<div class='math'>\\frac{". $a1 ."}{". $b1 ."}*\\frac{". $a2 ."}{". $b2 ."}</div>", $resA ."/". $resB);
+			$t->help = "Um zwei Brüche zu Multiplizieren rechnet man Zähler mal Zähler und Nenner mal Nenner.
+						<div class='math'>\\frac{a}{c}*\\frac{b}{d}=\\frac{a*b}{c*d}</div>";
 		}
 		
 		// divide

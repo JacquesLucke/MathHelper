@@ -51,16 +51,30 @@
 }
 #links{
 	float: left;
-	background-color:rgb(210, 210, 210);
+	background-color: rgb(210, 210, 210);
 	
 	width: 250px;
 	height: 640px;
 	margin: 5px;
 }
 
-#footer{
+#help{
 	clear:none;
+	width: 980px;
 	
+	margin-left: auto;
+	margin-right: auto;
+}
+#help #helpSwitchButton{
+	font-size: 130%;
+	background-color: rgb(210, 210, 210);
+}
+#help #helpWindow{
+	margin-top: 30px;
+	display: none;
+}
+
+#footer{
 	width: 980px;
 	height: 40px;
 	margin: 5px;
