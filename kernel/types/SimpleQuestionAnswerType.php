@@ -4,7 +4,7 @@
 		public $question;
 		public $answer;
 		public $jsMathUse = true;
-		public $help = "keine Hilfe zu dieser Aufgabe vorhanden";
+		public $links = "keine Hilfe zu dieser Aufgabe vorhanden";
 	
 		public function __construct($question, $answer)
 		{
@@ -82,10 +82,10 @@
 									font-size: 25px;
 								}
 						
-					#help{
+					#links{
 						text-align: left;
 					}
-					#help span{
+					#links span{
 						margin:10px;
 						display:block;
 					}
@@ -177,9 +177,9 @@
 			<?php
 		}
 		
-		public function AddTaskHelp()
+		public function AddTaskLinks()
 		{
-			echo "<div id='help'><span>". $this->help ."</span></div>";
+			echo "<div id='links'><span>". $this->links ."</span></div>";
 		}
 	}
 ?>

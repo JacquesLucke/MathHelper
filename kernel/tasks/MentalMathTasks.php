@@ -64,16 +64,16 @@
             $t = new SimpleQuestionAnswerType($z ."^2", pow($z, 2));
         }
 		
-		$t->help = '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask">alle üben</a></br>';
-		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-1">Addition üben</a></br>';
-		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-2">Subtraktion üben</a></br>';
-		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-3">Multiplizieren üben</a></br>';
-		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-4">Dividieren üben</a></br>';
-		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-5">Wurzel ziehen üben</a></br>';
-		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-6">Quadrieren üben</a></br>';
-		$t->help .= '</br>';
-		$t->help .= '</br>';
-		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask">Brüche üben</a></br>';
+		$t->links = '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask">alle üben</a></br>';
+		$t->links .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-1">Addition üben</a></br>';
+		$t->links .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-2">Subtraktion üben</a></br>';
+		$t->links .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-3">Multiplizieren üben</a></br>';
+		$t->links .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-4">Dividieren üben</a></br>';
+		$t->links .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-5">Wurzel ziehen üben</a></br>';
+		$t->links .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-6">Quadrieren üben</a></br>';
+		$t->links .= '</br>';
+		$t->links .= '</br>';
+		$t->links .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask">Brüche üben</a></br>';
 		
 		return $t;
 	}
@@ -170,20 +170,20 @@
 			$t = new SimpleQuestionAnswerType("<div class='math'>{(\\frac{". $a ."}{". $b ."}})^". $exponent ."</div>", pow($a, $exponent) ."/". pow($b, $exponent));
 		}
 		
-		$t->help = 'Beispiel: 3/4 ; 18/5';
-		$t->help .= '</br>';
-		$t->help .= '</br>';
-		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask">alles mit Brüchen üben</a></br>';
-		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask-.-1">Kürzen üben</a></br>';
-		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask-.-2">Addition üben</a></br>';
-		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask-.-3">Subtraktion üben</a></br>';
-		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask-.-4">Multiplikation üben</a></br>';
-		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask-.-5">Division üben</a></br>';
-		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask-.-6">Wurzel ziehen üben</a></br>';
-		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask-.-7">Potenzieren üben</a></br>';
-		$t->help .= '</br>';
-		$t->help .= '</br>';
-		$t->help .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask">andere Kopfrechenaufgaben üben</a></br>';
+		$t->links = 'Beispiel: 3/4 ; 18/5';
+		$t->links .= '</br>';
+		$t->links .= '</br>';
+		$t->links .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask">alles mit Brüchen üben</a></br>';
+		$t->links .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask-.-1">Kürzen üben</a></br>';
+		$t->links .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask-.-2">Addition üben</a></br>';
+		$t->links .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask-.-3">Subtraktion üben</a></br>';
+		$t->links .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask-.-4">Multiplikation üben</a></br>';
+		$t->links .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask-.-5">Division üben</a></br>';
+		$t->links .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask-.-6">Wurzel ziehen üben</a></br>';
+		$t->links .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask-.-7">Potenzieren üben</a></br>';
+		$t->links .= '</br>';
+		$t->links .= '</br>';
+		$t->links .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask">andere Kopfrechenaufgaben üben</a></br>';
 		$t->jsMathUse = false;
 		
 		// check if the fraction is an integer

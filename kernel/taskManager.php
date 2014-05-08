@@ -34,7 +34,7 @@
 			echo "ungültige Url";
 		}
 		
-		public function AddTaskHelp()
+		public function AddTaskLinks()
 		{
 		}
 	}

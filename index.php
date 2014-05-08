@@ -43,8 +43,8 @@
 				<div id="actualTask">
 					<?php	$task->AddTask(); ?>
 				</div>
-				<div id="help">
-					<?php 	$task->AddTaskHelp(); ?>
+				<div id="links">
+					<?php 	$task->AddTaskLinks(); ?>
 				</div>
 			</div>
 			<div id="footer">
