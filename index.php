@@ -48,8 +48,8 @@
 				</div>
 			</div>
 			<div id="help">
-				<button id="helpSwitchButton" onclick="SwitchHelpWindow()">Wie ging das nochmal?</button>
 				<div id="helpWindow"><?php 	$task->AddHelp(); ?></div>
+				<button id="helpSwitchButton" onclick="SwitchHelpWindow()">Wie ging das nochmal?</button>
 			</div>
 			<div id="footer">
 				<span>von Jacques Lucke</span>

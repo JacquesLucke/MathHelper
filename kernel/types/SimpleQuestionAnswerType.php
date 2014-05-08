@@ -127,6 +127,7 @@
 					function CheckResult()
 					{
 						var r = document.getElementById("resultTextBox").value;
+						r = r.replace(/,/g, ".");
 						if(r == result)
 						{
 							document.getElementById("resultTextBox").style.backgroundColor = "rgb(153, 255, 196)";

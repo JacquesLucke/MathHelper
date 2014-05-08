@@ -133,6 +133,8 @@
 			DivideFractions($a1, $b1, $a2, $b2, $resA, $resB);
 		
 			$t = new SimpleQuestionAnswerType("<div class='math'>\\frac{". $a1 ."}{". $b1 ."}:\\frac{". $a2 ."}{". $b2 ."}</div>", $resA ."/". $resB);
+			$t->help = "Um zwei Brüche zu Dividieren, multipliziert man den ersten Bruch mit dem <a href='?task=MentalMathTasks-.-GenerateReciprocalTask'>Kehrwert</a> des zweiten.
+						<div class='math'>\\frac{a}{c}*\\frac{b}{d}=\\frac{a*d}{c*b}</div>";
 		}
 		
 		// root
@@ -172,10 +174,7 @@
 			$t = new SimpleQuestionAnswerType("<div class='math'>{(\\frac{". $a ."}{". $b ."}})^". $exponent ."</div>", pow($a, $exponent) ."/". pow($b, $exponent));
 		}
 		
-		$t->links = 'Beispiel: 3/4 ; 18/5';
-		$t->links .= '</br>';
-		$t->links .= '</br>';
-		$t->links .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask">alles mit Brüchen üben</a></br>';
+		$t->links = '<a href="?task=MentalMathTasks-.-GenerateFractionTask">alles mit Brüchen üben</a></br>';
 		$t->links .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask-.-1">Kürzen üben</a></br>';
 		$t->links .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask-.-2">Addition üben</a></br>';
 		$t->links .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask-.-3">Subtraktion üben</a></br>';
@@ -185,11 +184,38 @@
 		$t->links .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask-.-7">Potenzieren üben</a></br>';
 		$t->links .= '</br>';
 		$t->links .= '</br>';
+		$t->links .= '<a href="?task=MentalMathTasks-.-GenerateReciprocalTask">Kehrwert bilden üben</a></br>';
 		$t->links .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask">andere Kopfrechenaufgaben üben</a></br>';
 		$t->jsMathUse = false;
 		
 		// check if the fraction is an integer
 		if(!($random == 1 || $random == 6 || $random == 7)) if($resB == 1) $t->answer = $resA;
+		
+		return $t;
+	}
+	
+	function GenerateReciprocalTask($data)
+	{
+		$numTaskTypes = 2;
+		if($data == "" || $data < 1 || $data > $numTaskTypes) $random = rand(1, $numTaskTypes);
+		else $random = $data;
+		
+		if($random == 1)
+		{
+			GenerateFraction(15, $a, $b, true);
+			$t = new SimpleQuestionAnswerType("Kehrwert: <div class='math'>\\frac{". $a ."}{". $b ."}</div>", $b ."/". $a);
+			$t->help = "Beim Bilden von Kehrwerten (anderer Name für das Reziproke), vertauscht man Zähler und Nenner.";
+		}
+		if($random == 2)
+		{
+			$numbers = array(1, 2, 4, 5, 8, 10, 20, 50, 100);
+			$number = $numbers[rand(0, count($numbers) - 1)];
+			if(rand(0, 1) == 1) $number = 1 / $number;
+			$t = new SimpleQuestionAnswerType("Kehrwert: <div class='math'>". $number ."</div>", 1 / $number);
+			$t->help = "Beim Bilden von Kehrwerten (anderer Name für das Reziproke), rechnet man 1 durch die Zahl.";
+		}
+		
+		$t->links = '<a href="?task=MentalMathTasks-.-GenerateFractionTask-.-5">Division von Brüchen üben</a></br>';
 		
 		return $t;
 	}
