@@ -40,7 +40,7 @@
 				<div id="headline"><h1>Train yourself</h1></div>
 			</div>
 			<div id="status">
-				<a href="?task=MentalMathTasks-.-GenerateMentalMathTask">Zum ersten Aufgabentyp</a>
+				<a href="Grundaufgaben">Zum ersten Aufgabentyp</a>
 			</div>
 			<div id="currentTask">
 				<div id="actualTask">
