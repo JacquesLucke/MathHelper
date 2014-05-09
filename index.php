@@ -12,12 +12,14 @@
 <!DOCTYPE html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		
-		<link rel="stylesheet" type="text/css" href="styles/indexStyle.css">
-		
+	
 		<!-- load jsMath library -->
 		<script src="external/jsMath/plugins/noImageFonts.js"></script>
 		<script src="external/jsMath/jsMath.js"></script>
+		
+		<!-- load css -->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="styles/indexStyle.css">
 		
 		<?php
 			if(isset($_GET['task'])) 
@@ -34,7 +36,7 @@
 	<body>
 		<div id="website">
 			<div id="header">
-				<h1>Mathehilfe</h1>
+				<div id="headline"><h1>Train yourself</h1></div>
 			</div>
 			<div id="status">
 				<a href="?task=MentalMathTasks-.-GenerateMentalMathTask">Zum ersten Aufgabentyp</a>

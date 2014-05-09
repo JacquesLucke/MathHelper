@@ -25,11 +25,12 @@
 					
 					#completeTask{
 						position: relative;
-						height: 500px;
+						height: 100%;
+						border: 1px solid rgba(0, 0, 0, 0);
 					}
 				
 						#question{
-							font-size:400%;
+							font-size: 300%;
 							
 							margin: 20px;
 							margin-top: 60px;
@@ -37,7 +38,7 @@
 						
 						#answerBar{
 							position: absolute;
-							bottom: 0px;
+							bottom: 10px;
 							right: 20px;
 							left: 20px;
 						}
@@ -57,6 +58,7 @@
 							#input{
 								float: left;
 								width: 33%;
+								text-align: center;
 							}
 								#resultTextBox{
 									font-size: 35px;
@@ -65,7 +67,7 @@
 									margin-bottom: 5px;
 								}
 								.inputButton{
-									font-size: 25px;
+									font-size: 15px;
 									width: 40px;
 									background-color: rgb(210, 210, 210);
 									margin: 0px;
@@ -83,10 +85,10 @@
 									font-size: 25px;
 								}
 						
-					#links{
+					#taskLinks{
 						text-align: left;
 					}
-					#links span{
+					#taskLinks span{
 						margin:10px;
 						display:block;
 					}
@@ -181,7 +183,7 @@
 		
 		public function AddTaskLinks()
 		{
-			echo "<div id='links'><span>". $this->links ."</span></div>";
+			echo "<div id='taskLinks'><span>". $this->links ."</span></div>";
 		}
 		
 		public function AddHelp()

@@ -1,96 +1,108 @@
-﻿body {
-	background-color:rgb(230, 230, 230);
+﻿*{
+	font-family: 'Open Sans', sans-serif;
+	
+	margin: 0px;
+	padding: 0px;
+}
+
+body{
+	background: #c1e0ff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #c1e0ff 0%, #5c8ed6 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c1e0ff), color-stop(100%,#5c8ed6)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #c1e0ff 0%,#5c8ed6 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #c1e0ff 0%,#5c8ed6 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #c1e0ff 0%,#5c8ed6 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #c1e0ff 0%,#5c8ed6 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c1e0ff', endColorstr='#5c8ed6',GradientType=0 ); /* IE6-9 */
+}
+
+button{
+	background-color: rgb(220, 220, 230);
+	padding: 4px;
+	border-radius: 2px 5px 2px 5px;
+	border-style: ridge;
+	border-color: rgba(180, 180, 180, 0.2);
+}
+button:hover{
+	border-radius: 10px;
+	background-color: rgb(200, 200, 210);
 }
 
 #website{
-	width: 1000px;
-	height: 900px;
-	
-	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
+	width: 1020px;
+	padding: 10px;
+	
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 0%, #d9e2f9 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#d9e2f9)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#d9e2f9 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffff 0%,#d9e2f9 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffff 0%,#d9e2f9 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ffffff 0%,#d9e2f9 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d9e2f9',GradientType=0 ); /* IE6-9 */
+	
+	border-radius: 8px 8px 2px 2px;
+	
+	-moz-box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.2);
+	filter: progid:DXImageTransform.Microsoft.Shadow(strength=1,color=#333333,direction=135);
 }
 
 #header{
-	width: 980px;
-	height: 50px;
-	margin: 5px;
-	
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
+}
+#header #headline{
 }
 
 #status{
-	width: 980px;
-	height: 70px;
-	margin: 5px;
-	
 	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
+	margin: 10px;
 }
 
 #currentTask{
-	width: 980px;
-	height: 650px;
-	margin: 5px;
+	height: 500px;
+	clear: both;
+	padding: 20px;
 	
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
+	border-top: 1px solid rgb(180, 180, 180);
 }
 
 #actualTask{
 	float: left;
-	background-color: rgb(210, 210, 210);
-	
-	width: 710px;
-	height: 640px;
-	margin: 5px;
+	width: 680px;
 }
 #links{
-	float: left;
-	background-color: rgb(210, 210, 210);
+	float: right;
+	width: 290px;
+	margin-left: 4px;
+	height: 100%;
 	
-	width: 250px;
-	height: 640px;
-	margin: 5px;
+	border-left: 1px solid rgb(150, 150, 150);
 }
 
 #help{
-	clear:none;
-	width: 980px;
+	clear: both;
+	text-align: center;
+	padding: 20px;
 	
-	margin-left: auto;
-	margin-right: auto;
+	border-top: 1px solid rgb(150, 150, 150);
 }
 #help #helpSwitchButton{
-	font-size: 130%;
-	background-color: rgb(210, 210, 210);
 }
 #help #helpWindow{
-	margin-top: 20px;
-	margin-bottom: 30px;
-	display: none;
 }
 
 #footer{
-	width: 980px;
-	height: 40px;
-	margin: 5px;
-	
+	margin-top: 20px;
 	text-align: right;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 300px;
 }
 #footer span{
-	margin: 10px;
 }
 
 a:link {	color:#021453; text-decoration:none;}
 a:visited {	color:#021453; text-decoration:none;}
 a:focus {	color:#021453; text-decoration:none;}
-a:hover {	color:#021453; text-decoration:none;}
+a:hover {	color:#000000; text-decoration:none; background-color: rgb(230, 230, 230);}
 a:active {	color:#021453; text-decoration:none;}
