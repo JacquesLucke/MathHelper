@@ -90,7 +90,7 @@
 			GenerateFraction(15, $a, $b, true);
 			$factor = rand(2, 15);	
 		
-			$t = new SimpleQuestionAnswerType("Kürzen: <div class='math'>\\frac{". $a * $factor."}{". $b * $factor ."}</div>", $a ."/". $b);
+			$t = new SimpleQuestionAnswerType("<div class='math'>\\frac{". $a * $factor."}{". $b * $factor ."}</div>", $a ."/". $b);
 		}
 		
 		// add

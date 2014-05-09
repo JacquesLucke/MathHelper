@@ -37,7 +37,7 @@
 	<body>
 		<div id="website">
 			<div id="header">
-				<div id="headline"><h1>Train yourself</h1></div>
+				<div id="headline"><h1>Train Yourself</h1></div>
 			</div>
 			<div id="status">
 				<a href="Grundaufgaben">Zum ersten Aufgabentyp</a>

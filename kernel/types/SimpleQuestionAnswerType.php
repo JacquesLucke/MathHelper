@@ -15,7 +15,7 @@
 	
 		public function SetTaskTitle()
 		{
-			echo "<title>". $this->question ."</title>";
+			echo "<title>Train Yourself</title>";
 		}
 
 		public function AddTaskStyle()
