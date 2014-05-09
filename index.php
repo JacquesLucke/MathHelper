@@ -4,8 +4,9 @@
     //ini_set('display_errors', 1);
 
 	include("kernel/taskManager.php");
+	include("redirect.php");
 	
-	$task = GetTaskFromString($_GET['task']);	
+	$task = GetTaskFromString(GetTaskDescription());	
 ?>
 
 
