@@ -1,3 +1,11 @@
 ﻿Dieses Webprojekt soll Schülern dabei helfen, die Zusammenhänge in Mathematik besser zu verstehen, um sich Geld für Nachhilfe sparen zu können. :D
 
 Testen kann man derzeit unter www.moonicfx.com
+
+Wie füge ich neue Aufgaben hinzu?
+1. neue .php Datei im Verzeichnis kernel/tasks/ erstellen. 
+2. darin eine Funktion mit einem Parameter $data schreiben
+3. diese Funktion muss nun ein Task-Objekt erstellen und zurück geben
+4. diesem Objekt sollten nun passende Links zu anderen Aufgaben zugeteilt werden, indem der Parameter links gefüllt wird
+5. Datei kernel/helpRedirect.php öffnen und eigenen Typ ergänzen. Dabei steht in der Zeichenfolge immer zuerst der Dateiname und dann der Funktionsname
+6. zu guter letzt, muss noch aus anderen Aufgaben zu dieser verlinkt werden, damit diese auffindbar ist
