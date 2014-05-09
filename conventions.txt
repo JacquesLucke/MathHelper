@@ -1,6 +1,10 @@
-IDs -> "website", "navigationList", ...
+﻿IDs -> "website", "navigationList", ...
 
 php adding strings together: space beetween . and a variable. no space next to " -> "bla". $z ."blu"
+
+Try to remember: 
+	"Any fool can write code that a computer can understand. Good programmers write code that humans can understand."
+	"Good code is written with the future in mind, both from programmer's perspective and the user's perspective."
 
 Task description in URL:
 	seperator: -.-
