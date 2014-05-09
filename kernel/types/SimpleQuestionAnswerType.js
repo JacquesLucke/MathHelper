@@ -1,4 +1,3 @@
-var result = "<?=$this->answer?>";
 document.getElementById("resultTextBox").focus();
 document.getElementById("resultTextBox").value = "";
 

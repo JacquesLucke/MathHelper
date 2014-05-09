@@ -47,7 +47,12 @@
 		
 		public function AddScript()
 		{
-			?><script src="kernel/types/SimpleQuestionAnswerType.js"></script><?php
+			?>
+			<script>
+				var result = "<?=$this->answer?>";
+			</script>
+			<script src="kernel/types/SimpleQuestionAnswerType.js"></script>
+			<?php
 		}
 		
 		public function AddTaskLinks()
