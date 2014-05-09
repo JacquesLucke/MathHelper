@@ -64,16 +64,16 @@
             $t = new SimpleQuestionAnswerType($z ."^2", pow($z, 2));
         }
 		
-		$t->links = '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask">alle üben</a></br>';
-		$t->links .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-1">Addition üben</a></br>';
-		$t->links .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-2">Subtraktion üben</a></br>';
-		$t->links .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-3">Multiplizieren üben</a></br>';
-		$t->links .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-4">Dividieren üben</a></br>';
-		$t->links .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-5">Wurzel ziehen üben</a></br>';
-		$t->links .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask-.-6">Quadrieren üben</a></br>';
+		$t->links = '<a href="grundaufgaben">alle üben</a></br>';
+		$t->links .= '<a href="addieren">Addition üben</a></br>';
+		$t->links .= '<a href="subtrahieren">Subtraktion üben</a></br>';
+		$t->links .= '<a href="multiplizieren">Multiplizieren üben</a></br>';
+		$t->links .= '<a href="dividieren">Dividieren üben</a></br>';
+		$t->links .= '<a href="wurzel">Wurzel ziehen üben</a></br>';
+		$t->links .= '<a href="quadrieren">Quadrieren üben</a></br>';
 		$t->links .= '</br>';
 		$t->links .= '</br>';
-		$t->links .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask">Brüche üben</a></br>';
+		$t->links .= '<a href="/?task=MentalMathTasks-.-GenerateFractionTask">Brüche üben</a></br>';
 		
 		return $t;
 	}
@@ -133,7 +133,7 @@
 			DivideFractions($a1, $b1, $a2, $b2, $resA, $resB);
 		
 			$t = new SimpleQuestionAnswerType("<div class='math'>\\frac{". $a1 ."}{". $b1 ."}:\\frac{". $a2 ."}{". $b2 ."}</div>", $resA ."/". $resB);
-			$t->help = "Um zwei Brüche zu Dividieren, multipliziert man den ersten Bruch mit dem <a href='?task=MentalMathTasks-.-GenerateReciprocalTask'>Kehrwert</a> des zweiten.
+			$t->help = "Um zwei Brüche zu Dividieren, multipliziert man den ersten Bruch mit dem <a href='/?task=MentalMathTasks-.-GenerateReciprocalTask'>Kehrwert</a> des zweiten.
 						<div class='math'>\\frac{a}{c}*\\frac{b}{d}=\\frac{a*d}{c*b}</div>";
 		}
 		
@@ -174,18 +174,18 @@
 			$t = new SimpleQuestionAnswerType("<div class='math'>{(\\frac{". $a ."}{". $b ."}})^". $exponent ."</div>", pow($a, $exponent) ."/". pow($b, $exponent));
 		}
 		
-		$t->links = '<a href="?task=MentalMathTasks-.-GenerateFractionTask">alles mit Brüchen üben</a></br>';
-		$t->links .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask-.-1">Kürzen üben</a></br>';
-		$t->links .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask-.-2">Addition üben</a></br>';
-		$t->links .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask-.-3">Subtraktion üben</a></br>';
-		$t->links .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask-.-4">Multiplikation üben</a></br>';
-		$t->links .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask-.-5">Division üben</a></br>';
-		$t->links .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask-.-6">Wurzel ziehen üben</a></br>';
-		$t->links .= '<a href="?task=MentalMathTasks-.-GenerateFractionTask-.-7">Potenzieren üben</a></br>';
+		$t->links = '<a href="/?task=MentalMathTasks-.-GenerateFractionTask">alles mit Brüchen üben</a></br>';
+		$t->links .= '<a href="/?task=MentalMathTasks-.-GenerateFractionTask-.-1">Kürzen üben</a></br>';
+		$t->links .= '<a href="/?task=MentalMathTasks-.-GenerateFractionTask-.-2">Addition üben</a></br>';
+		$t->links .= '<a href="/?task=MentalMathTasks-.-GenerateFractionTask-.-3">Subtraktion üben</a></br>';
+		$t->links .= '<a href="/?task=MentalMathTasks-.-GenerateFractionTask-.-4">Multiplikation üben</a></br>';
+		$t->links .= '<a href="/?task=MentalMathTasks-.-GenerateFractionTask-.-5">Division üben</a></br>';
+		$t->links .= '<a href="/?task=MentalMathTasks-.-GenerateFractionTask-.-6">Wurzel ziehen üben</a></br>';
+		$t->links .= '<a href="/?task=MentalMathTasks-.-GenerateFractionTask-.-7">Potenzieren üben</a></br>';
 		$t->links .= '</br>';
 		$t->links .= '</br>';
-		$t->links .= '<a href="?task=MentalMathTasks-.-GenerateReciprocalTask">Kehrwert bilden üben</a></br>';
-		$t->links .= '<a href="?task=MentalMathTasks-.-GenerateMentalMathTask">andere Kopfrechenaufgaben üben</a></br>';
+		$t->links .= '<a href="/?task=MentalMathTasks-.-GenerateReciprocalTask">Kehrwert bilden üben</a></br>';
+		$t->links .= '<a href="/?task=MentalMathTasks-.-GenerateMentalMathTask">andere Kopfrechenaufgaben üben</a></br>';
 		$t->jsMathUse = false;
 		
 		// check if the fraction is an integer
@@ -215,7 +215,7 @@
 			$t->help = "Beim Bilden von Kehrwerten (anderer Name für das Reziproke), rechnet man 1 durch die Zahl.";
 		}
 		
-		$t->links = '<a href="?task=MentalMathTasks-.-GenerateFractionTask-.-5">Division von Brüchen üben</a></br>';
+		$t->links = '<a href="/?task=MentalMathTasks-.-GenerateFractionTask-.-5">Division von Brüchen üben</a></br>';
 		
 		return $t;
 	}

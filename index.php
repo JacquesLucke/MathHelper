@@ -1,18 +1,18 @@
 ﻿<?php
+	header('Content-type: text/html; charset=utf-8;');
 	// should be off, when committing to master
 	//error_reporting(E_ALL);
     //ini_set('display_errors', 1);
 
 	include("kernel/taskManager.php");
-	include("redirect.php");
+	include("helpRedirect.php");
 	
 	$task = GetTaskFromString(GetTaskDescription());	
 ?>
-
-
-<!DOCTYPE html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+        "http://www.w3.org/TR/html4/strict.dtd">
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	
 		<!-- load jsMath library -->
 		<script src="external/jsMath/plugins/noImageFonts.js"></script>
@@ -23,7 +23,7 @@
 		<link rel="stylesheet" type="text/css" href="styles/indexStyle.css">
 		
 		<?php
-			if(isset($_GET['task'])) 
+			if(isset($task)) 
 			{
 				$task->AddTaskStyle();
 				$task->SetTaskTitle();
