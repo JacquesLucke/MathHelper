@@ -5,7 +5,7 @@
     //ini_set('display_errors', 1);
 
 	include("kernel/taskManager.php");
-	include("helpRedirect.php");
+	include("kernel/helpRedirect.php");
 	
 	$task = GetTaskFromString(GetTaskDescription());	
 ?>
