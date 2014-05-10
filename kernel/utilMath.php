@@ -91,7 +91,7 @@
 		$highNumber = 100000000;
 		do
 		{
-			$x = round(mt_rand(0, $highNumber) / $highNumber * $max + $min, $decimals);
+			$x = round(mt_rand(0, $highNumber) / $highNumber * ($max - $min) + $min, $decimals);
 		} 
 		while (strlen(explode(".", $x)[1]) != $decimals);
 		return $x;
