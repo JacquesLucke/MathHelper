@@ -64,6 +64,8 @@
             $t = new SimpleQuestionAnswerType($z ."^2", pow($z, 2));
         }
 		
+		$t->taskDescription = "Berechne";
+		
 		$t->links = '<a href="grundaufgaben">alle üben</a></br>';
 		$t->links .= '<a href="addieren">Addition üben</a></br>';
 		$t->links .= '<a href="subtrahieren">Subtraktion üben</a></br>';
@@ -88,7 +90,7 @@
 		if($random == 1)
 		{
 			GenerateFraction(15, $a, $b, true);
-			$factor = rand(2, 15);	
+			$factor = rand(2, 10);	
 		
 			$t = new SimpleQuestionAnswerType("<div class='math'>\\frac{". $a * $factor."}{". $b * $factor ."}</div>", $a ."/". $b);
 		}
@@ -173,6 +175,9 @@
 			}
 			$t = new SimpleQuestionAnswerType("<div class='math'>{(\\frac{". $a ."}{". $b ."}})^". $exponent ."</div>", pow($a, $exponent) ."/". pow($b, $exponent));
 		}
+		
+		$t->taskDescription = "Berechne";
+		if($random == 1) $t->taskDescription = "Kürze";
 		
 		$t->links = '<a href="brueche">alles mit Brüchen üben</a></br>';
 		$t->links .= '<a href="brueche_kuerzen">Kürzen üben</a></br>';
