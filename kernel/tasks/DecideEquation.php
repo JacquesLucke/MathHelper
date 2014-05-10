@@ -90,6 +90,7 @@
 		
 		$t->links = "<a href='grundaufgaben'>alle üben</a></br>";
 		$t->links .= "<a href='brueche'>Brüche üben</a></br>";
+		$t->links .= "<a href='zahlenbereiche'>Zahlenbereiche üben</a></br>";
 		
 		$t->help = "Um diese Aufgabe zu lösen, muss man sich die vorhandenen Exponenten an der Variable anschauen.<br/>";
 		$t->help .= "<br/>";

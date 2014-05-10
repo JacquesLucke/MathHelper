@@ -28,6 +28,7 @@
 			case "kehrwert":	return "MentalMathTasks-.-GenerateReciprocalTask";
 			
 			case "gleichungstyp":	return "DecideEquation-.-GenerateDecideEquationTask";
+			case "zahlenbereiche": 	return "NumberClassification-.-GenerateNumberClassificationTask";
 		}
 		return "";
 	}
