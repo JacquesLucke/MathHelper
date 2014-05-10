@@ -66,4 +66,11 @@
 		$resB = $b1 * $a2;
 		ReduceFraction($resA, $resB);
 	}
+	
+	// -5 -> "-5"     5 -> "+5"
+	function AddSignToString($x)
+	{
+		if($x >= 0) $x = "+" + $x;
+		return $x;
+	}
 ?>
