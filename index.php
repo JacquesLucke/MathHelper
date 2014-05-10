@@ -66,6 +66,10 @@
 			jsMath.Process(document);
 			
 			document.getElementById('helpWindow').style.display = "none";
+			if(document.getElementById('helpWindow').innerHTML == "")
+			{
+				document.getElementById('switchHelpButton').style.display = "none";
+			}
 			function SwitchHelpWindow()
 			{
 				var help = document.getElementById('helpWindow');
