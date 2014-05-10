@@ -28,8 +28,8 @@
 			?>
 			<div id="completeTask">
 				<?php
-				if($this->jsMathUse) echo "<div id='question'><div class='math'>". $this->question . "</div></div><br/>";
-				else echo "<div id='question'>". $this->question . "</div><br/>";
+				if($this->jsMathUse) echo "<div id='question'><div class='math'>". $this->question . "</div></div>";
+				else echo "<div id='question'>". $this->question . "</div>";
 				?>
 					<div id="answerBar">
 						<div id="show"><button id="showResultButton" onmousedown="ShowResult()" >L&ouml;sung</button></div>
