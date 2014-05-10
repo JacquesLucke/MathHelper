@@ -1,7 +1,7 @@
 <?php
 	function GenerateDecideEquationTask($data)
 	{
-		$random = rand(1, 3);
+		$random = rand(1, 4);
 		
 		// linear
 		if($random == 1)
@@ -15,7 +15,7 @@
 			if($type == 2) $question = $a ."x". $b ."=". $c ."x";
 			if($type == 3) $question = $a . $b ."x=". $c;
 			
-			$t = new MultipleChoiceType($question, array("lineare Gleichung", "quadratische Gleichung", "biquadratische Gleichung", "sonstiges"), 0);
+			$t = new MultipleChoiceType($question, array("lineare Gleichung", "quadratische Gleichung", "kubische Gleichung", "biquadratische Gleichung", "sonstiges"), 0);
 		}
 		
 		// quadratic
@@ -32,11 +32,28 @@
 			if($type == 3) $question = $a . $b ."x^2". $c ."x=". $d ."x";
 			if($type == 4) $question = $a . $b ."x". $c ."x^2=". $d ."x^2";
 			
-			$t = new MultipleChoiceType($question, array("lineare Gleichung", "quadratische Gleichung", "biquadratische Gleichung", "sonstiges"), 1);
+			$t = new MultipleChoiceType($question, array("lineare Gleichung", "quadratische Gleichung", "kubische Gleichung", "biquadratische Gleichung", "sonstiges"), 1);
+		}
+		
+		// cubic
+		if($random == 3)
+		{		
+			$a = RandSpecial(-10, 10, false);
+			$b = AddSignToString(RandSpecial(-10, 10, false));
+			$c = AddSignToString(RandSpecial(-10, 10, false));
+			$d = RandSpecial(-3, 3, false);
+			
+			$type = rand(1, 4);
+			if($type == 1) $question = $a ."x^3". $b ."x". $c ."=". $d;
+			if($type == 2) $question = $a ."x". $b ."x^2". $c ."=". $d ."x^3";
+			if($type == 3) $question = $a . $b ."x^2". $c ."x^3=". $d ."x";
+			if($type == 4) $question = $a ."x^3". $b ."x". $c ."x^2=". $d ."x^2";
+			
+			$t = new MultipleChoiceType($question, array("lineare Gleichung", "quadratische Gleichung", "kubische Gleichung", "biquadratische Gleichung", "sonstiges"), 2);
 		}
 		
 		// biquadratic
-		if($random == 3)
+		if($random == 4)
 		{		
 			$a = RandSpecial(-10, 10, false);
 			$b = AddSignToString(RandSpecial(-10, 10, false));
@@ -49,7 +66,7 @@
 			if($type == 3) $question = $a . $b ."x^4". $c ."x^2=". $d ."x^2";
 			if($type == 4) $question = $a . $b ."x^2". $c ."x^4=". $d ."x^4";
 			
-			$t = new MultipleChoiceType($question, array("lineare Gleichung", "quadratische Gleichung", "biquadratische Gleichung", "sonstiges"), 2);
+			$t = new MultipleChoiceType($question, array("lineare Gleichung", "quadratische Gleichung", "kubische Gleichung", "biquadratische Gleichung", "sonstiges"), 3);
 		}
 		
 		$t->links = "<a href='grundaufgaben'>alle üben</a></br>";
