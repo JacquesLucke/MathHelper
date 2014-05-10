@@ -142,7 +142,7 @@
 		// root
 		if($random == 6)
 		{
-			$exponent = mt_(2, 5);
+			$exponent = mt_rand(2, 5);
 			// make the exponent 2 appear more often
 			if($exponent < 5) 
 			{

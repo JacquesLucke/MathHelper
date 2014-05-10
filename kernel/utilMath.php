@@ -75,7 +75,7 @@
 	}
 	
 	// generates random number
-	function RandSpecial($max, $min = 1, $allowZero = true)
+	function RandSpecial($min, $max, $allowZero = true)
 	{
 		do
 		{
