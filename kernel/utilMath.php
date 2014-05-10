@@ -70,7 +70,18 @@
 	// -5 -> "-5"     5 -> "+5"
 	function AddSignToString($x)
 	{
-		if($x >= 0) $x = "+" + $x;
+		if($x >= 0) $x = "+$x";
+		return $x;
+	}
+	
+	// generates random number
+	function RandSpecial($max, $min = 1, $allowZero = true)
+	{
+		do
+		{
+			$x = rand($min, $max);
+		} 
+		while (!$allowZero && $x == 0);
 		return $x;
 	}
 ?>
