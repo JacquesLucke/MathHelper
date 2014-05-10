@@ -65,7 +65,7 @@
 		
 		public function AddTask()
 		{
-			echo "<div id='completeTask'>";
+			echo "<div id='completeTask' onkeyup='Next()'>";
 				if($this->jsMathUse) echo "<div id='question'><div class='math'>". $this->question . "</div></div>";
 				else echo "<div id='question'>". $this->question . "</div>";
 				
