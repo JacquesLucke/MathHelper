@@ -11,9 +11,13 @@
 	
 		public function __construct($question, $answers, $answerIndex)
 		{
+			// shuffle answers to make it more random -> user has to read the buttons every time -> remembers them better maybe
+			$result = $answers[$answerIndex];
+			shuffle($answers);
+		
 			$this->question = $question;
 			$this->answers = $answers;
-			$this->answerIndex = $answerIndex;
+			$this->answerIndex = array_search($result, $answers);
 		}
 	
 		public function SetTaskTitle()
