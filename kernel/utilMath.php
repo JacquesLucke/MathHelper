@@ -84,4 +84,16 @@
 		while (!$allowZero && $x == 0);
 		return $x;
 	}
+	
+	// create a real number with an given amount of decimals
+	function GenerateRealNumber($min, $max, $decimals)
+	{
+		$highNumber = 100000000;
+		do
+		{
+			$x = round(rand(0, $highNumber) / $highNumber * $max + $min, $decimals);
+		} 
+		while (strlen(explode(".", $x)[1]) != $decimals);
+		return $x;
+	}
 ?>
