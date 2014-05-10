@@ -23,48 +23,7 @@
 
 		public function AddTaskStyle()
 		{
-			?>
-				<style>
-					#completeTask{
-						position: relative;
-						height: 100%;
-						border: 1px solid rgba(0, 0, 0, 0);
-					}
-					#taskDescription{
-						font-size: 120%;
-					}
-					#question{
-						font-size: 300%;
-						
-						margin: 20px;
-						margin-top: 60px;
-					}
-					#answerBar{
-						position: absolute;
-						bottom: 10px;
-						right: 20px;
-						left: 20px;
-					}
-					.answerButton{
-						font-size: 20px;
-						float: left;
-						margin: 5px;
-					}
-					#next{
-						font-size: 25px;
-						float: right;
-						margin: 5px;
-					}
-					
-					#taskLinks{
-						text-align: left;
-					}
-					#taskLinks span{
-						margin:10px;
-						display:block;
-					}
-				</style>
-			<?php
+			?><link rel='stylesheet' type='text/css' href='kernel/types/MultipleChoiceType.css'><?php
 		}
 		
 		public function AddTask()
@@ -89,38 +48,8 @@
 			?>
 				<script>
 					var result = "<?= $this->answers[$this->answerIndex] ?>";
-					var ignoreClicks = false;
-					function CheckResult(element)
-					{
-						if(!ignoreClicks)
-						{
-							element.style.border = "2px solid black";
-							ShowResult();
-						}
-						ignoreClicks = true;
-					}
-					
-					function ShowResult()
-					{
-						var elements = document.getElementsByClassName("answerButton");
-						for(var i = 0; i < elements.length; i++)
-						{
-							if(elements[i].innerHTML == result)
-							{
-								elements[i].style.backgroundColor = "rgb(153, 255, 196)";
-							}
-							else
-							{
-								elements[i].style.backgroundColor = "rgb(255, 188, 183)";
-							}
-						}
-					}
-					
-					function Next()
-					{
-						window.location.reload();
-					}
 				</script>
+				<script src="kernel/types/MultipleChoiceType.js"></script>
 			<?php
 		}
 		
