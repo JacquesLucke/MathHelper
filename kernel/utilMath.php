@@ -30,8 +30,8 @@
 	{
 		do
 		{
-			$a = rand(1, $max);
-			$b = rand(1, $max);	
+			$a = mt_rand(1, $max);
+			$b = mt_rand(1, $max);	
 			if($reduced) ReduceFraction($a, $b);
 		} 
 		while ($b == 1);
@@ -79,7 +79,7 @@
 	{
 		do
 		{
-			$x = rand($min, $max);
+			$x = mt_rand($min, $max);
 		} 
 		while (!$allowZero && $x == 0);
 		return $x;
@@ -91,7 +91,7 @@
 		$highNumber = 100000000;
 		do
 		{
-			$x = round(rand(0, $highNumber) / $highNumber * $max + $min, $decimals);
+			$x = round(mt_rand(0, $highNumber) / $highNumber * $max + $min, $decimals);
 		} 
 		while (strlen(explode(".", $x)[1]) != $decimals);
 		return $x;

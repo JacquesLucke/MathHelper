@@ -1,7 +1,7 @@
 <?php
 	function GenerateDecideEquationTask($data)
 	{
-		$random = rand(1, 5);
+		$random = mt_rand(1, 5);
 		
 		// linear
 		if($random == 1)
@@ -10,7 +10,7 @@
 			$b = AddSignToString(RandSpecial(-10, 10, false));
 			$c = RandSpecial(-10, 10, false);
 			
-			$type = rand(1, 3);
+			$type = mt_rand(1, 3);
 			if($type == 1) $question = $a ."x". $b ."=". $c;
 			if($type == 2) $question = $a ."x". $b ."=". $c ."x";
 			if($type == 3) $question = $a . $b ."x=". $c;
@@ -26,7 +26,7 @@
 			$c = AddSignToString(RandSpecial(-10, 10, false));
 			$d = RandSpecial(-3, 3, false);
 			
-			$type = rand(1, 4);
+			$type = mt_rand(1, 4);
 			if($type == 1) $question = $a ."x^2". $b ."x". $c ."=". $d;
 			if($type == 2) $question = $a ."x". $b ."x^2". $c ."=". $d;
 			if($type == 3) $question = $a . $b ."x^2". $c ."x=". $d ."x";
@@ -43,7 +43,7 @@
 			$c = AddSignToString(RandSpecial(-10, 10, false));
 			$d = RandSpecial(-3, 3, false);
 			
-			$type = rand(1, 4);
+			$type = mt_rand(1, 4);
 			if($type == 1) $question = $a ."x^3". $b ."x". $c ."=". $d;
 			if($type == 2) $question = $a ."x". $b ."x^2". $c ."=". $d ."x^3";
 			if($type == 3) $question = $a . $b ."x^2". $c ."x^3=". $d ."x";
@@ -60,7 +60,7 @@
 			$c = AddSignToString(RandSpecial(-10, 10, false));
 			$d = RandSpecial(-3, 3, false);
 			
-			$type = rand(1, 4);
+			$type = mt_rand(1, 4);
 			if($type == 1) $question = $a ."x^4". $b ."x^2". $c ."=". $d;
 			if($type == 2) $question = $a ."x^2". $b ."x^4". $c ."=". $d;
 			if($type == 3) $question = $a . $b ."x^4". $c ."x^2=". $d ."x^2";
@@ -77,7 +77,7 @@
 			$c = AddSignToString(RandSpecial(-10, 10, false));
 			$d = RandSpecial(-3, 3, false);
 			
-			$type = rand(1, 4);
+			$type = mt_rand(1, 4);
 			if($type == 1) $question = $a ."x^4". $b ."x^2". $c ."x=". $d;
 			if($type == 2) $question = $a ."x^2". $b ."x^x". $c ."=". $d ."x^5";
 			if($type == 3) $question = $a ."x^3". $b ."x^4". $c ."=". $d;

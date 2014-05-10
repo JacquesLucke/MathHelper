@@ -2,41 +2,41 @@
 	function GenerateMentalMathTask($data)
 	{
 		$numTaskTypes = 6;
-		if($data == "" || $data < 1 || $data > $numTaskTypes) $random = rand(1, $numTaskTypes);
+		if($data == "" || $data < 1 || $data > $numTaskTypes) $random = mt_rand(1, $numTaskTypes);
 		else $random = $data;
 		
 		// add
 		if($random == 1)
 		{
-			$z1 = rand(2, 100);
-			$z2 = rand(2, 100);
+			$z1 = mt_rand(2, 100);
+			$z2 = mt_rand(2, 100);
 			$t = new SimpleQuestionAnswerType($z1 ."+". $z2, $z1 + $z2);
 		}
 		
 		// subtract
 		if($random == 2)
 		{
-			$z1 = rand(2, 100);
-			$z2 = rand(2, 100);
+			$z1 = mt_rand(2, 100);
+			$z2 = mt_rand(2, 100);
 			$t = new SimpleQuestionAnswerType($z1 ."-". $z2, $z1 - $z2);
 		}
 		
 		// multiply
 		if($random == 3)
 		{
-			$type = rand(1, 3);
+			$type = mt_rand(1, 3);
 			// same size
 			if($type <= 2)
 			{
-				$z1 = rand(2, 20);
-				$z2 = rand(2, 20);
+				$z1 = mt_rand(2, 20);
+				$z2 = mt_rand(2, 20);
 				$t = new SimpleQuestionAnswerType($z1 ."*". $z2, $z1 * $z2);
 			}
 			// big difference
 			if($type == 3)
 			{
-				$z1 = rand(2, 10);
-				$z2 = rand(50, 1000);
+				$z1 = mt_rand(2, 10);
+				$z2 = mt_rand(50, 1000);
 				$t = new SimpleQuestionAnswerType($z1 ."*". $z2, $z1 * $z2);
 			}
 		}
@@ -44,15 +44,15 @@
 		// divide
 		if($random == 4)
 		{
-			$z1 = rand(2, 50);
-			$z2 = $z1 * rand(2, 15);
+			$z1 = mt_rand(2, 50);
+			$z2 = $z1 * mt_rand(2, 15);
 			$t = new SimpleQuestionAnswerType($z2 .":". $z1, $z2 / $z1);
 		}
 
 		// square root
 		if($random == 5)
 		{
-			$z1 = rand(2, 20);
+			$z1 = mt_rand(2, 20);
 			$z2 = $z1 * $z1;
 			$t = new SimpleQuestionAnswerType("\sqrt{". $z2 . "}", $z1);
 		} 
@@ -60,7 +60,7 @@
         // square
         if ($random == 6)
         {
-            $z = rand(1, 20);
+            $z = mt_rand(1, 20);
             $t = new SimpleQuestionAnswerType($z ."^2", pow($z, 2));
         }
 		
@@ -83,14 +83,14 @@
 	function GenerateFractionTask($data)
 	{
 		$numTaskTypes = 7;
-		if($data == "" || $data < 1 || $data > $numTaskTypes) $random = rand(1, $numTaskTypes);
+		if($data == "" || $data < 1 || $data > $numTaskTypes) $random = mt_rand(1, $numTaskTypes);
 		else $random = $data;
 		
 		// reduce
 		if($random == 1)
 		{
 			GenerateFraction(15, $a, $b, true);
-			$factor = rand(2, 10);	
+			$factor = mt_rand(2, 10);	
 		
 			$t = new SimpleQuestionAnswerType("<div class='math'>\\frac{". $a * $factor."}{". $b * $factor ."}</div>", $a ."/". $b);
 		}
@@ -142,7 +142,7 @@
 		// root
 		if($random == 6)
 		{
-			$exponent = rand(2, 5);
+			$exponent = mt_(2, 5);
 			// make the exponent 2 appear more often
 			if($exponent < 5) 
 			{
@@ -161,7 +161,7 @@
 		// potenz
 		if($random == 7)
 		{
-			$exponent = rand(2, 5);
+			$exponent = mt_rand(2, 5);
 			// make the exponent 2 appear more often
 			if($exponent < 5) 
 			{
@@ -203,7 +203,7 @@
 	function GenerateReciprocalTask($data)
 	{
 		$numTaskTypes = 2;
-		if($data == "" || $data < 1 || $data > $numTaskTypes) $random = rand(1, $numTaskTypes);
+		if($data == "" || $data < 1 || $data > $numTaskTypes) $random = mt_rand(1, $numTaskTypes);
 		else $random = $data;
 		
 		if($random == 1)
@@ -215,8 +215,8 @@
 		if($random == 2)
 		{
 			$numbers = array(1, 2, 4, 5, 8, 10, 20, 50, 100);
-			$number = $numbers[rand(0, count($numbers) - 1)];
-			if(rand(0, 1) == 1) $number = 1 / $number;
+			$number = $numbers[mt_rand(0, count($numbers) - 1)];
+			if(mt_rand(0, 1) == 1) $number = 1 / $number;
 			$t = new SimpleQuestionAnswerType("Kehrwert: <div class='math'>". $number ."</div>", 1 / $number);
 			$t->help = "Beim Bilden von Kehrwerten (anderer Name für das Reziproke), rechnet man 1 durch die Zahl.";
 		}
