@@ -5,7 +5,7 @@
 		$uri = strtolower($_SERVER['REQUEST_URI']);
 		$uri = substr($uri, 1);
 		
-		// get task description from url -> pretty URLs		
+		// get task description from url -> pretty URLs	
 		switch($uri)
 		{
 			case "grundaufgaben": 	return "MentalMathTasks-.-GenerateMentalMathTask";
@@ -26,6 +26,8 @@
 			case "brueche_potenzieren":		return "MentalMathTasks-.-GenerateFractionTask-.-7";
 			
 			case "kehrwert":	return "MentalMathTasks-.-GenerateReciprocalTask";
+			
+			case "gleichungstyp":	return "DecideEquation-.-GenerateDecideEquationTask";
 		}
 		return "";
 	}

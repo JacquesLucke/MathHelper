@@ -1,6 +1,7 @@
 ﻿<?php
 	include("utilMath.php");
 	include("types/SimpleQuestionAnswerType.php");
+	include("types/MultipleChoiceType.php");
 	
 	function GetTaskFromString($taskString)
 	{
