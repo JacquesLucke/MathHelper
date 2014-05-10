@@ -54,7 +54,7 @@
 			</div>
 			<div id="help">
 				<div id="helpWindow"><?php 	$task->AddHelp(); ?></div>
-				<button id="helpSwitchButton" onclick="SwitchHelpWindow()">Wie ging das nochmal?</button>
+				<button id="switchHelpButton" onclick="SwitchHelpWindow()">Wie ging das nochmal?</button>
 			</div>
 			<div id="footer">
 				<span>von Jacques Lucke</span>
