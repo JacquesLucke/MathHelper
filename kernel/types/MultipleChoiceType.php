@@ -7,6 +7,7 @@
 		public $jsMathUse = true;
 		public $links = "keine Links zu dieser Aufgabe vorhanden";
 		public $help;
+		public $taskDescription = "";
 	
 		public function __construct($question, $answers, $answerIndex)
 		{
@@ -28,6 +29,9 @@
 						position: relative;
 						height: 100%;
 						border: 1px solid rgba(0, 0, 0, 0);
+					}
+					#taskDescription{
+						font-size: 120%;
 					}
 					#question{
 						font-size: 300%;
@@ -66,6 +70,7 @@
 		public function AddTask()
 		{
 			echo "<div id='completeTask' onkeyup='Next()'>";
+				echo "<div id='taskDescription'>". $this->taskDescription ."</div>";
 				if($this->jsMathUse) echo "<div id='question'><div class='math'>". $this->question . "</div></div>";
 				else echo "<div id='question'>". $this->question . "</div>";
 				

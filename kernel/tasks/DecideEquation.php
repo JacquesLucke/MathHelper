@@ -86,6 +86,8 @@
 			$t = new MultipleChoiceType($question, array("lineare Gleichung", "quadratische Gleichung", "kubische Gleichung", "biquadratische Gleichung", "sonstiges"), 4);
 		}
 		
+		$t->taskDescription = "Bestimme den Gleichungstyp";
+		
 		$t->links = "<a href='grundaufgaben'>alle üben</a></br>";
 		$t->links .= "<a href='brueche'>Brüche üben</a></br>";
 		
