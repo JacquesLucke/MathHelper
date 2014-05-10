@@ -1,6 +1,6 @@
 RewriteEngine On
 
-AddCharset utf-8 .css .html .xhtml
+AddDefaultCharset UTF-8
 
 RewriteCond %{SCRIPT_FILENAME} !-d
 RewriteCond %{SCRIPT_FILENAME} !-f
