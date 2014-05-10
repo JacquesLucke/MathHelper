@@ -6,6 +6,16 @@
 		// linear
 		if($random == 1)
 		{	
+			$a = RandSpecial(-10, 10, false);
+			$b = AddSignToString(RandSpecial(-10, 10, false));
+			$c = RandSpecial(-10, 10, false);
+			
+			$type = rand(1, 3);
+			if($type == 1) $question = $a ."x". $b ."=". $c;
+			if($type == 2) $question = $a ."x". $b ."=". $c ."x";
+			if($type == 3) $question = $a . $b ."x=". $c;
+			
+			$t = new MultipleChoiceType($question, array("lineare Gleichung", "quadratische Gleichung", "biquadratische Gleichung", "sonstiges"), 0);
 		}
 		
 		// quadratic
