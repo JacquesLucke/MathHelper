@@ -5,6 +5,8 @@
 		public $answers;
 		public $answerIndex;
 		public $jsMathUse = true;
+		public $links = "keine Links zu dieser Aufgabe vorhanden";
+		public $help;
 	
 		public function __construct($question, $answers, $answerIndex)
 		{
@@ -48,6 +50,14 @@
 						font-size: 25px;
 						float: right;
 						margin: 5px;
+					}
+					
+					#taskLinks{
+						text-align: left;
+					}
+					#taskLinks span{
+						margin:10px;
+						display:block;
 					}
 				</style>
 			<?php
@@ -111,10 +121,12 @@
 		
 		public function AddTaskLinks()
 		{
+			echo "<div id='taskLinks'><span>". $this->links ."</span></div>";
 		}
 		
 		public function AddHelp()
 		{
+			echo $this->help;
 		}
 	}
 ?>
