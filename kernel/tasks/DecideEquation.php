@@ -1,7 +1,7 @@
 <?php
 	function GenerateDecideEquationTask($data)
 	{
-		$random = rand(1, 2);
+		$random = rand(1, 3);
 		
 		// linear
 		if($random == 1)
@@ -35,6 +35,22 @@
 			$t = new MultipleChoiceType($question, array("lineare Gleichung", "quadratische Gleichung", "biquadratische Gleichung", "sonstiges"), 1);
 		}
 		
+		// biquadratic
+		if($random == 3)
+		{		
+			$a = RandSpecial(-10, 10, false);
+			$b = AddSignToString(RandSpecial(-10, 10, false));
+			$c = AddSignToString(RandSpecial(-10, 10, false));
+			$d = RandSpecial(-3, 3, false);
+			
+			$type = rand(1, 4);
+			if($type == 1) $question = $a ."x^4". $b ."x^2". $c ."=". $d;
+			if($type == 2) $question = $a ."x^2". $b ."x^4". $c ."=". $d;
+			if($type == 3) $question = $a . $b ."x^4". $c ."x^2=". $d ."x^2";
+			if($type == 4) $question = $a . $b ."x^2". $c ."x^4=". $d ."x^4";
+			
+			$t = new MultipleChoiceType($question, array("lineare Gleichung", "quadratische Gleichung", "biquadratische Gleichung", "sonstiges"), 2);
+		}
 		
 		$t->links = "<a href='grundaufgaben'>alle üben</a></br>";
 		$t->links .= "<a href='brueche'>Brüche üben</a></br>";
