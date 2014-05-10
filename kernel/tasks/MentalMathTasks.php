@@ -189,7 +189,7 @@
 		$t->links .= '<a href="brueche_potenzieren">Potenzieren üben</a></br>';
 		$t->links .= '</br>';
 		$t->links .= '</br>';
-		$t->links .= '<a href="Gleichungstyp">Gleichungstyp bestimmen</a></br>';
+		$t->links .= '<a href="gleichungstyp">Gleichungstyp bestimmen</a></br>';
 		$t->links .= '<a href="kehrwert">Kehrwert bilden üben</a></br>';
 		$t->links .= '<a href="grundaufgaben">andere Kopfrechenaufgaben üben</a></br>';
 		$t->jsMathUse = false;
