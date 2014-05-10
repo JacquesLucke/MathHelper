@@ -75,9 +75,10 @@
 		$t->help = "Um diese Aufgabe zu lösen, muss man sich die vorhandenen Exponenten an der Variable anschauen.<br/>";
 		$t->help .= "<br/>";
 		$t->help .= "<ul type='circle'>";
-		$t->help .= "<li>keine Exponent oder 1: lineare Gleichung</li>";
-		$t->help .= "<li>2 höchster Exponent: quadratische Gleichung</li>";
-		$t->help .= "<li>4 als höchsten Exponent und optional noch 2: biquadratische Gleichung</li>";
+		$t->help .= "<li><b>kein Exponent oder einen:</b> lineare Gleichung</li>";
+		$t->help .= "<li><b>zwei als höchsten Exponent:</b> quadratische Gleichung</li>";
+		$t->help .= "<li><b>drei als höchsten Exponent:</b> kubische Gleichung</li>";
+		$t->help .= "<li><b>vier als höchsten Exponent und optional noch zwei:</b> biquadratische Gleichung</li>";
 		$t->help .= "<li>alles andere sind sonstige Gleichungen die sich zum Beispiel 5ten-Grades nennen (je nach dem höchsten Exponenten).</li>";
 		$t->help .= "</ul>";
 		
