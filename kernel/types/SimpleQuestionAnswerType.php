@@ -6,6 +6,7 @@
 		public $jsMathUse = true;
 		public $links = "keine Links zu dieser Aufgabe vorhanden";
 		public $help;
+		public $taskDescription = "";
 	
 		public function __construct($question, $answer)
 		{
@@ -27,6 +28,7 @@
 		{
 			?>
 			<div id="completeTask">
+				<div id="taskDescription"><?= $this->taskDescription ?></div>
 				<?php
 				if($this->jsMathUse) echo "<div id='question'><div class='math'>". $this->question . "</div></div>";
 				else echo "<div id='question'>". $this->question . "</div>";

@@ -4,6 +4,9 @@
 	border: 1px solid rgba(0, 0, 0, 0);
 }
 
+#taskDescription{
+	font-size: 120%;
+}
 #question{
 	font-size: 300%;
 	
