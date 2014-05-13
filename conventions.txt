@@ -9,6 +9,6 @@ Try to remember:
 Task description in URL:
 	seperator: -.-
 	1. file name
-	2. class name
+	2. function name
 	3. optional data (task specific)
 	z.b. task=basicPlus_._BasicPlusTask
