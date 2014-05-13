@@ -6,7 +6,6 @@ function CompareStrings(a, b)
 	a = ToNumber(a);
 	b = ToNumber(b);
 	
-	
 	return a == b;
 }
 
