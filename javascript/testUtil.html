@@ -10,9 +10,11 @@
 				<thead>
 					<th>String 1</th>
 					<th>String 2</th>
-					<th>Works?</th>
+					<th>Works (a, b)</th>
+					<th>Works (b, a)</th>
 				<thead>
 				<colgroup>
+					<col width="100">
 					<col width="100">
 					<col width="100">
 					<col width="100">
@@ -28,10 +30,13 @@
 			testStrings[0] = new Array("1/10", "1/10");
 			testStrings[1] = new Array("1/5", "1:5");
 			testStrings[2] = new Array("1,2", "1.2");
+			testStrings[3] = new Array("1/5", "0.2");
+			testStrings[4] = new Array("6/5", "1.2");
+			testStrings[5] = new Array("3/1", "3");
 			
 			for(var i = 0; i < testStrings.length; ++i)
 			{
-				el.innerHTML += "<tr><td>" + testStrings[i][0] + "</td><td>" + testStrings[i][1] + "</td><td>" + CompareStrings(testStrings[i][0], testStrings[i][1]) + "</td></tr>";
+				el.innerHTML += "<tr><td>" + testStrings[i][0] + "</td><td>" + testStrings[i][1] + "</td><td>" + CompareStrings(testStrings[i][1], testStrings[i][0]) + "</td><td>" + CompareStrings(testStrings[i][0], testStrings[i][1]) + "</td></tr>";
 			}
 		</script>
 	</body>
