@@ -22,7 +22,7 @@
 	
 		public function SetTaskTitle()
 		{
-			echo "<title>Train Yourself</title>";
+			echo "Train Yourself";
 		}
 
 		public function AddTaskStyle()

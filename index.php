@@ -31,7 +31,7 @@
 			if(isset($task)) 
 			{
 				$task->AddTaskStyle();
-				$task->SetTaskTitle();
+				echo "<title>". $task->SetTaskTitle() ."</title>";
 			}
 			else
 			{
