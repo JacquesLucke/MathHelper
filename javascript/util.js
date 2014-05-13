@@ -1,3 +1,4 @@
+// compares to strings with numbers and fractions in it
 function CompareStrings(a, b)
 {
 	a = UnifyChars(a);
