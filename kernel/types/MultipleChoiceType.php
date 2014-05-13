@@ -27,7 +27,7 @@
 
 		public function AddTaskStyle()
 		{
-			?><link rel='stylesheet' type='text/css' href='kernel/types/MultipleChoiceType.css'><?php
+			echo "<link rel='stylesheet' type='text/css' href='kernel/types/MultipleChoiceType.css'>";
 		}
 		
 		public function AddTask()
@@ -49,12 +49,12 @@
 		
 		public function AddScript()
 		{
-			?>
+            echo "
 				<script>
-					var result = "<?= $this->answers[$this->answerIndex] ?>";
+					var result = \"".$this->answers[$this->answerIndex]."\";
 				</script>
-				<script src="kernel/types/MultipleChoiceType.js"></script>
-			<?php
+				<script src=\"kernel/types/MultipleChoiceType.js\"></script>
+            ";
 		}
 		
 		public function AddTaskLinks()
