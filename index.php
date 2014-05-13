@@ -20,6 +20,9 @@
 		<script src="external/jsMath/plugins/noImageFonts.js"></script>
 		<script src="external/jsMath/jsMath.js"></script>
 		
+		<!-- load util file -->
+		<script src="javascript/util.js"></script>
+		
 		<!-- load css -->
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="styles/indexStyle.css">
