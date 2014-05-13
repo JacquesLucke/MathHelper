@@ -27,7 +27,7 @@
 
 		public function AddTaskStyle()
 		{
-			echo "<link rel='stylesheet' type='text/css' href='kernel/types/MultipleChoiceType.css'>"
+			echo "<link rel='stylesheet' type='text/css' href='kernel/types/MultipleChoiceType.css'>";
 		}
 		
 		public function AddTask()
@@ -54,7 +54,7 @@
 					var result = \"".$this->answers[$this->answerIndex]."\";
 				</script>
 				<script src=\"kernel/types/MultipleChoiceType.js\"></script>
-            "
+            ";
 		}
 		
 		public function AddTaskLinks()
