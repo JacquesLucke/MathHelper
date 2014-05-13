@@ -1,15 +1,25 @@
 // compares to strings with numbers and fractions in it
-function CompareStrings(a, b)
+function CompareStrings(a, b, options)
 {
 	a = UnifyChars(a);
 	b = UnifyChars(b);
 	
-	a = ToNumber(a);
-	b = ToNumber(b);
+	if(typeof options === "undefined" || options == "")
+	{
+		a = ToNumber(a);
+		b = ToNumber(b);
+	}
+	
+	if(options == "reduced fraction")
+	{
+		a = CorrectFraction(a);
+		b = CorrectFraction(b);
+	}
 	
 	return a == b;
 }
 
+// converts a fraction to a number to compare them
 function ToNumber(a)
 {
 	if(a.indexOf("/") >= 0)
@@ -22,6 +32,20 @@ function ToNumber(a)
 	}	
 	return a;
 }
+
+// corrects signs
+function CorrectFraction(a)
+{
+	var part = a.split("/");
+	// make both positive when they are both negative or only the first is negative
+	if(part[0] * part[1] >= 0) 	part[0] = Math.abs(part[0]);
+	else part[0] = -Math.abs(part[0]);
+	part[1] = Math.abs(part[1]);
+	
+	return part[0] + "/" + part[1];
+}
+
+// checks if a variable is a valid number
 function IsNumber(a)
 {
 	return !isNaN(a);
