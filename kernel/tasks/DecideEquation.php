@@ -77,9 +77,11 @@
 			$c = AddSignToString(RandSpecial(-10, 10, false));
 			$d = RandSpecial(-3, 3, false);
 			
+			$e = mt_rand(5, 10);
+			
 			$type = mt_rand(1, 4);
 			if($type == 1) $question = $a ."x^4". $b ."x^2". $c ."x=". $d;
-			if($type == 2) $question = $a ."x^2". $b ."x^x". $c ."=". $d ."x^5";
+			if($type == 2) $question = $a ."x^2". $b ."x^x". $c ."=". $d ."x^". $e;
 			if($type == 3) $question = $a ."x^3". $b ."x^4". $c ."=". $d;
 			if($type == 4) $question = $a . $b ."x". $c ."x^4=". $d ."x";
 			
@@ -95,10 +97,10 @@
 		$t->help = "Um diese Aufgabe zu lösen, muss man sich die vorhandenen Exponenten an der Variable anschauen.<br/>";
 		$t->help .= "<br/>";
 		$t->help .= "<ul type='circle'>";
-		$t->help .= "<li><b>kein Exponent oder einen:</b> lineare Gleichung</li>";
+		$t->help .= "<li><b>eins als höchsten Exponent:</b> lineare Gleichung</li>";
 		$t->help .= "<li><b>zwei als höchsten Exponent:</b> quadratische Gleichung</li>";
 		$t->help .= "<li><b>drei als höchsten Exponent:</b> kubische Gleichung</li>";
-		$t->help .= "<li><b>vier als höchsten Exponent und optional noch zwei:</b> biquadratische Gleichung</li>";
+		$t->help .= "<li><b>vier als höchsten Exponent und sonst nur zwei oder keinen:</b> biquadratische Gleichung</li>";
 		$t->help .= "<li>alles andere sind sonstige Gleichungen die sich zum Beispiel 5ten-Grades nennen (je nach dem höchsten Exponenten).</li>";
 		$t->help .= "</ul>";
 		
