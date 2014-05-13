@@ -61,7 +61,7 @@
 		
 		public function AddTaskLinks()
 		{
-			echo "<div id='taskLinks'><span>". $this->links ."</span></div>";
+			?><div id='taskLinks'><span><?=$this->links?></span></div><?php
 		}
 		
 		public function AddHelp()
