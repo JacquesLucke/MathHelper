@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>Test util.js</title>
+		
+		<script src="util.js"></script>
+	</head>
+	<body>
+		<div id="StringComparison">
+			<table id="StringComparisonTable" border="1px">
+				<colgroup>
+					<col width="100">
+					<col width="100">
+					<col width="100">
+				</colgroup>
+
+			</table>
+		</div>
+	
+		<script>
+			var el = document.getElementById("StringComparisonTable");
+			
+			var testStrings = new Array();
+			testStrings[0] = new Array("1/5", "0,2");
+			testStrings[1] = new Array("1/2", "0.5");
+			
+			for(var i = 0; i < testStrings.length; ++i)
+			{
+				el.innerHTML += "<tr><td>" + testStrings[i][0] + "</td><td>" + testStrings[i][1] + "</td><td>" + CompareStrings(testStrings[i][0], testStrings[i][1]) + "</td></tr>";
+			}
+		</script>
+	</body>
+</html>
