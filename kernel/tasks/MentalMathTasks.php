@@ -93,6 +93,7 @@
 			$factor = mt_rand(2, 10);	
 		
 			$t = new SimpleQuestionAnswerType("<div class='math'>\\frac{". $a * $factor."}{". $b * $factor ."}</div>", $a ."/". $b);
+			$t->answerCheckType = "reduced Fraction";
 		}
 		
 		// add

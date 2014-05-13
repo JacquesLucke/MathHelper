@@ -7,6 +7,7 @@
 		public $links = "keine Links zu dieser Aufgabe vorhanden";
 		public $help;
 		public $taskDescription = "";
+		public $answerCheckType = "";
 	
 		public function __construct($question, $answer)
 		{
@@ -52,6 +53,7 @@
 			?>
 			<script>
 				var result = "<?=$this->answer?>";
+				var answerCheckType = "<?=$this->answerCheckType?>";
 			</script>
 			<script src="kernel/types/SimpleQuestionAnswerType.js"></script>
 			<?php

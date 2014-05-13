@@ -4,7 +4,7 @@ document.getElementById("resultTextBox").value = "";
 function CheckResult()
 {
 	var r = document.getElementById("resultTextBox").value;
-	if(CompareStrings(r, result))
+	if(CompareStrings(r, result, answerCheckType))
 	{
 		document.getElementById("resultTextBox").style.backgroundColor = "rgb(153, 255, 196)";
 	}
