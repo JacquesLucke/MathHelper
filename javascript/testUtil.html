@@ -6,7 +6,12 @@
 	</head>
 	<body>
 		<div id="StringComparison">
-			<table id="StringComparisonTable" border="1px">
+			<table id="StringComparisonTable" border="0px">
+				<thead>
+					<th>String 1</th>
+					<th>String 2</th>
+					<th>Works?</th>
+				<thead>
 				<colgroup>
 					<col width="100">
 					<col width="100">
@@ -20,8 +25,9 @@
 			var el = document.getElementById("StringComparisonTable");
 			
 			var testStrings = new Array();
-			testStrings[0] = new Array("1/5", "0,2");
-			testStrings[1] = new Array("1/2", "0.5");
+			testStrings[0] = new Array("1/10", "1/10");
+			testStrings[1] = new Array("1/5", "1:5");
+			testStrings[2] = new Array("1,2", "1.2");
 			
 			for(var i = 0; i < testStrings.length; ++i)
 			{
